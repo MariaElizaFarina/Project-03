@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>OhMyFood</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./public/css/prefixed/style.css" />
+  </head>
+
+  <body>
+    <div class="spinning-animation">
+      <h2 class="spinning-title">
+        <img src="./public/images/logo/ohmyfood@2x.svg" alt="ohmyfood" />
+      </h2>
+      <div class="spinning-loader"></div>
+    </div>
+
+    <header class="header header-home">
+      <!-- <span></span> -->
+      <h1 class="header-title">
+        <img
+          class="header-logo"
+          src="./public/images/logo/ohmyfood@2x.svg"
+          alt="ohmyfood"
+          title="Ohmyfood"
+        />
+      </h1>
+      <div class="header-location">
+        <i class="fa-sharp fa-solid fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="location">
+        <i class="fa-sharp fa-solid fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </div>
+
+      <div class="top-wrapper">
+        <section class="explore">
+          <h2 class="explore-title">Book the menu you like</h2>
+          <p class="explore-text">
+            Discover top-of-the-art restaurants we picked for you
+          </p>
+
+          <a href="#restaurants" class="btn"> Explore our restaurants </a>
+        </section>
+
+        <section class="step">
+          <h2 class="title">How it works</h2>
+
+          <div class="step-card">
+            <span class="card-number">1</span>
+            <div class="card-info">
+              <div class="card-background"></div>
+              <i class="step-card-icon fa-solid fa-mobile-screen-button"></i>
+              <p class="card-text">Chose a restaurant</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <span class="card-number">2</span>
+            <div class="card-info">
+              <div class="card-background"></div>
+              <i class="step-card-icon fa-solid fa-list-ul"></i>
+              <p class="card-text">Create your menu</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <span class="card-number">3</span>
+            <div class="card-info">
+              <div class="card-background"></div>
+              <i class="step-card-icon fa-solid fa-store"></i>
+              <p class="card-text">Go enjoy it at the restaurant</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="restaurants" id="restaurants">
+        <h2 class="title">Restaurants</h2>
+
+        <div class="restaurants-wrapper">
+          <div class="restaurant-card">
+            <a href="menu-1.html" class="restaurant-top">
+              <img
+                class="restaurant-img"
+                src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="The Full Palette"
+              />
+              <p class="restaurant-new">New</p>
+            </a>
+            <div class="restaurant-bottom">
+              <a href="menu-1.html">
+                <h3>The Full Palette</h3>
+                <p>New York</p>
+              </a>
+
+              <div class="heart">
+                <svg class="heart-svg" height="0" width="0">
+                  <defs>
+                    <clipPath
+                      id="heart-clip"
+                      clipPathUnits="objectBoundingBox"
+                      transform="scale(0.01 0.01)"
+                    >
+                      <i class="fa-solid fa-heart"></i>
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <div class="heart-container">
+                  <svg viewBox="0 0 100 100" class="heart-stroke">
+                    <i class="fa-solid fa-heart"></i>
+                  </svg>
+
+                  <div class="heart-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="restaurant-card">
+            <a href="menu-2.html" class="restaurant-top">
+              <img
+                class="restaurant-img"
+                src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="The Enchanted Plate"
+              />
+              <p class="restaurant-new">New</p>
+            </a>
+            <div class="restaurant-bottom">
+              <a href="menu-2.html">
+                <h3>The Enchanted Plate</h3>
+                <p>New York</p>
+              </a>
+
+              <div class="heart">
+                <div class="heart-container">
+                  <svg viewBox="0 0 100 100" class="heart-stroke">
+                    <i class="fa-solid fa-heart"></i>
+                  </svg>
+
+                  <div class="heart-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="restaurant-card">
+            <a href="menu-3.html" class="restaurant-top">
+              <img
+                class="restaurant-img"
+                src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="Bastille"
+              />
+            </a>
+            <div class="restaurant-bottom">
+              <a href="menu-3.html">
+                <h3>Bastille</h3>
+                <p>New York</p>
+              </a>
+
+              <div class="heart">
+                <div class="heart-container">
+                  <svg viewBox="0 0 100 100" class="heart-stroke">
+                    <i class="fa-solid fa-heart"></i>
+                  </svg>
+
+                  <div class="heart-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="restaurant-card">
+            <a href="menu-4.html" class="restaurant-top">
+              <img
+                class="restaurant-img"
+                src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="Le Gourmand"
+              />
+            </a>
+            <div class="restaurant-bottom">
+              <a href="menu-4.html">
+                <h3>Le Gourmand</h3>
+                <p>New York</p>
+              </a>
+
+              <div class="heart">
+                <div class="heart-container">
+                  <svg viewBox="0 0 100 100" class="heart-stroke">
+                    <i class="fa-solid fa-heart"></i>
+                  </svg>
+                  <div class="heart-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h2 class="footer-title">ohmyfood</h2>
+      <ul class="footer-list">
+        <li class="footer-info">
+          <a href="#">
+            <i class="footer-icon fa-solid fa-utensils"></i>
+            Suggest a restaurant
+          </a>
+        </li>
+        <li class="footer-info">
+          <a href="#">
+            <i class="footer-icon fa-solid fa-handshake-angle"></i>
+            Become a partner
+          </a>
+        </li>
+        <li class="footer-info">
+          <a href="#">Legal</a>
+        </li>
+        <li class="footer-info">
+          <a href="mailto:#">Contact</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

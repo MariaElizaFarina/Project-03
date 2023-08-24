@@ -1,0 +1,43 @@
+@import "../utilities/variables";
+
+.footer {
+    background-color:map-get($basic-color, dark);
+    color: map-get($basic-color, light);
+}
+
+    .footer-title {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: map-get($gap, small);   
+    }
+    &-icon {
+      min-width: 2.5rem;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: map-get($gap, small);
+      position: relative;
+      width: fit-content;
+  
+      &::after {
+        margin: 1rem;
+        background-image: linear-gradient(
+          $primary-color,
+          $secondary-color
+        );
+        content: "";
+        height: 9px;
+        margin-left: 9rem;
+        transition: $transition-all-fast;
+        width: 0%;
+      }
+  
+      &:hover {
+        &::after {
+          width: 50%;
+        }
+      }
+    }
+  }

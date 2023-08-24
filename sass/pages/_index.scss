@@ -1,0 +1,158 @@
+//everything with have to do with the index, besides the header and the footer
+@import "../utilities/variables";
+
+$width: 3rem;
+$height: 3rem;
+
+.top-wrapper {
+    @include desktop {
+      align-items: center;
+      background-image: url(../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+      background-size: cover;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20rem;
+      height: auto;
+      justify-content: center;
+      padding: map-get($padding, large);
+    }
+  }
+  
+  .explore {
+    align-items: center;
+    background-color: map-get($basic-color, lightGray);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: map-get($padding, xlarge) 0;
+    text-align: center;
+  
+    &-title {
+      padding-bottom: map-get($padding, xlarge);
+    }
+  
+    &-text {
+      padding-bottom: map-get($padding, large);
+    }
+  
+    @include desktop {
+      @include container;
+      @include backdrop-card;
+    }
+  }
+  
+  .-step {
+    @include container;
+  
+    @include tablet {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
+  
+      > .title {
+        grid-column-end: 4;
+        grid-column-start: 1;
+        text-align: center;
+      }
+    }
+  
+    @include desktop {
+      @include container;
+      @include backdrop-card;
+    }
+  }
+  
+  .restaurants {
+    background-color: map-get($basic-color, lightGray);
+    @include container;
+  
+    & > .title {
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+  
+  .restaurants-wrapper {
+    @include container;
+    padding: 0;
+  
+    @include tablet {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include desktop {
+      align-self: center;
+      grid-template-columns: repeat(4, minmax(25rem, 45rem));
+      max-width: 192rem;
+    }
+  }
+
+  .step-card {
+    @include card;
+    align-items: center;
+    background-color: map-get($basic-color, white);
+    display: flex;
+    gap: map-get($gap, base);
+    margin-left: calc($width / 2);
+  
+    &-number {
+      background-color: $primary-color;
+      border-radius: 50%;
+      color: map-get($basic-color, white);
+      display: grid;
+      height: $height;
+      left: calc($width / 2 * -1);
+      place-items: center;
+      position: absolute;
+      width: $width;
+      z-index: 10;
+    }
+  
+    &-info {
+      align-items: center;
+      border-radius: map-get($round, base);
+      display: flex;
+      gap: map-get($gap, base);
+      height: 100%;
+      overflow: hidden;
+      padding: map-get($padding, base);
+      padding-right: map-get($gap, base);
+      position: relative;
+      width: 100%;
+    }
+  
+    &-icon {
+      color: map-get($basic-color, gray);;
+      font-size: 2.5rem;
+      min-width: 6.35rem;
+      padding-left: 20%;
+      z-index: 10;
+    }
+  
+    &-text {
+      z-index: 10;
+    }
+  
+    &-background {
+      background-color: map-get($basic-color, lightGray);;
+      height: 100%;
+      left: -3rem;
+      position: absolute;
+      top: 0;
+      transform: skewX(-45deg);
+      transition: all 0.5s ease-in-out;
+      width: 0;
+      z-index: 9;
+    }
+  
+    &:hover &-background {
+      width: 150%;
+    }
+  
+    &:hover &-icon {
+      color: $primary-color;
+    }
+  }

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OhMyFood</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./public/css/prefixed/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <p class="header-link" href="index.html"></p>
+        <i class="fa-solid fa-arrow-left"></i>
+      </p>
+      <h1 class="header-title">
+        <img
+          src="./public/images/logo/ohmyfood@2x.svg"
+          alt="ohmyfood"
+          title="Ohmyfood"
+        />
+      </h1>
+      <!-- <span></span> -->
+    </header>
+
+    <main>
+      <img
+        class="top-image"
+        src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="The Full Palette"
+      />
+
+      <div class="menu-container">
+        <div class="menu-title">
+          <h2 class="menu-text">The full Palette</h2>
+
+          <div class="heart">
+            <svg class="heart-svg" height="0" width="0">
+              <defs>
+                <clipPath
+                  id="heart-clip"
+                  clipPathUnits="objectBoundingBox"
+                  transform="scale(0.01 0.01)"
+                >
+                  <!-- <path
+                    d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z"
+                  /> -->
+                </clipPath>
+              </defs>
+            </svg>
+
+            <div class="heart-container">
+              <svg viewBox="0 0 100 100" class="heart-stroke">
+                <!-- <path
+                  d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z"
+                /> -->
+              </svg>
+
+              <div class="heart-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="menu-section">
+          <h3 class="menu-section-title">Entrees</h3>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Escargot</h4>
+              <p class="card-description">With southern French spices</p>
+            </div>
+            <div class="card-price">25€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Duck Foie Gras</h4>
+              <p class="card-description">With black truffle shavings</p>
+            </div>
+            <div class="card-price">35€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Fried egg</h4>
+              <p class="card-description">
+                Seasoned with truffle cream and cheese
+              </p>
+            </div>
+            <div class="card-price">20€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <h3 class="section-title">Main Dish</h3>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Herb-Encrusted Steak</h4>
+              <p class="card-description">
+                With delicately sliced and seasoned vegetables
+              </p>
+            </div>
+            <div class="card-price">40€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Ox Trail Shepard's Pie</h4>
+              <p class="card-description">
+                With black truffle and pureed parsnips
+              </p>
+            </div>
+            <div class="card-price">35€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Filet of Sole</h4>
+              <p class="card-description">With citrus dressing</p>
+            </div>
+            <div class="card-price">44€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </section>
+        <section class="menu-section">
+          <h3 class="menu-section-title">Desserts</h3>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Paris-Brest</h4>
+              <p class="card-description">Revisted</p>
+            </div>
+            <div class="card-price">18€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Chocolate Macaroons</h4>
+              <p class="card-description">With vanilla ice cream</p>
+            </div>
+            <div class="card-price">22€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <div class="card-info">
+              <h4 class="card-title">Chocolate Mousse</h4>
+              <p class="card-description">With spices and black truffle</p>
+            </div>
+            <div class="card-price">25€</div>
+            <div class="card-button">
+              <i class="card-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </section>
+
+        <button class="btn">Order</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <h2 class="footer-title">ohmyfood</h2>
+      <ul class="footer-list">
+        <li class="footer-info">
+          <a href="#">
+            <i class="footer-icon fa-solid fa-utensils"></i>
+            Suggest a restaurant
+          </a>
+        </li>
+        <li class="footer-info">
+          <a href="#">
+            <i class="footer-icon fa-solid fa-handshake-angle"></i>
+            Become a partner
+          </a>
+        </li>
+        <li class="footer-info">
+          <a href="#">Legal</a>
+        </li>
+        <li class="footer-info">
+          <a href="mailto:#">Contact</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

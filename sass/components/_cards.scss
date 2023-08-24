@@ -1,0 +1,121 @@
+@import "../utilities/variables";
+
+.restaurant-card {
+  background-color: map-get($basic-color, light);
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+  .restaurant-top {
+    position: relative;
+  
+  &-img {
+    display: flex;
+    // height: 18rem;
+    object-fit: cover;
+    // width: 100%;
+  }
+  &-new {
+    background-color: $tertiary-color;
+    border-radius: map-get($round, small);
+    color: map-get($basic-color, light);
+    padding: map-get($padding, btn-02);
+    position: absolute;
+    right: map-get($padding, small);
+    top: map-get($padding, small);
+  }
+  &-bottom {
+    align-items: center;
+    display: grid;
+    gap: map-get($gap, medium);
+    grid-template-columns: 1fr min-content;
+    height: 100%;
+    justify-content: space-between;
+    padding: map-get($padding, small);
+    position: relative;
+    & > .heart {
+      margin-right: 2rem;
+    }
+  }
+
+  &::before {
+    background-image: linear-gradient(
+      to right,
+       $primary-color,
+       $secondary-color
+    );
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 0%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: $transition-all-fast;
+    width: 100%;
+  }
+
+  &:hover {
+    &::before {
+      height: 1rem;
+    }
+  }
+}
+
+.menu-card {
+  align-items: center;
+  background-color:map-get($basic-color, light);
+  display: flex;
+  overflow: hidden;
+  &-info {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: map-get($padding, small);
+  }
+  &-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &-price {
+    padding: map-get($padding, small);
+  }
+  &-button {
+    align-items: center;
+    align-self: stretch;
+    background-color: $tertiary-color;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: $transition-all-slow;
+    width: 0rem;
+  }
+  &-icon {
+    color: map-get($basic-color, light);
+    font-size: 3rem;
+  }
+  &:hover &__button {
+    width: 8rem;
+  }
+
+  &:hover &__button > i {
+    animation: rotate var(--slow);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

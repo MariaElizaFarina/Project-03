@@ -1,0 +1,36 @@
+//all basic html: padding, margin
+@import "../utilities/variables";
+
+*,
+*::after,
+*::before {
+box-sizing: inherit;
+margin: 0;
+padding: 0;
+}
+
+html {
+font-size: 60%;
+}
+
+body {
+box-sizing: border-box;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+ul {
+list-style: none;
+}
+
+button {
+border: none;
+cursor: pointer;
+}
+
+img {
+vertical-align: middle;
+}

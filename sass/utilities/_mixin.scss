@@ -1,0 +1,41 @@
+//pieces of code that we write (Sass)
+@import "../utilities/variables";
+
+@mixin card {
+    border-radius: map-get($round, round-base);
+    position: relative;
+    box-shadow: map-get($shadow, shadow-base);
+    cursor: pointer;
+
+  }
+  
+  @mixin backdrop-card {
+    border-radius: map-get($round, round-base);
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  @mixin container {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($gap, medium);
+    padding: map-get($padding, xlarge);
+  }
+  
+  @mixin tablet {
+    @media (min-width: $view-tablet) {
+      @content;
+    }
+  }
+  
+  @mixin desktop-small {
+    @media (min-width: $view-desktop-small) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: $view-desktop) {
+      @content;
+    }
+  }

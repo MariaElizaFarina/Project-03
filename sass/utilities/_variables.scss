@@ -1,0 +1,52 @@
+$view-tablet: 768px;
+$view-desktop-small: 992px;
+$view-desktop: 1400px;
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA ;
+$tertiary-color: #99E2D0;
+
+$basic-color: (
+"light": white,
+"dark": black,
+"darkGray": gray,
+"lightGray": lightgrey,
+
+);
+
+$padding: (
+"btn-01": 2rem 3rem,
+"btn-02": 0.5rem 3rem,
+"base": 2rem 0rem,
+"xsmall": 0.6rem,
+"small": 1.4rem,
+"medium": 2.2rem,
+"large": 3.1rem,
+"xlarge": 4.1rem,
+);
+
+$gap: (
+"gap-base": 2rem,
+"gap-small": 0.6rem,
+"gap-medium": 2.6rem,
+"gap-large": 3.6rem,
+);
+
+$round: (
+"round-base": 2rem,
+"round-small": 0.5rem,
+"round-medium": 6rem,
+"round-large": 9rem,
+);
+
+$shadow: (
+    "shadow-base": 4px 4px 10px #000004,
+    "shadow-down": 4px 4px 6px #000006,
+    "shadow-active": 4px 4px 4px #000007,
+);
+
+$slow: 0.5s;
+$fast: 0.2s;
+$transition-all-fast: all var(--fast) ease-in-out;
+$transition-all-slow: all var(--slow) ease-in-out;
+

@@ -1,0 +1,48 @@
+
+@import "../utilities/variables";
+
+.spinning-animation {
+    align-items: center;
+    animation: opacity-hide 2s forwards, width-hide 2s forwards;
+    background-color: map-get($basic-color, white);
+    display: flex;
+    flex-direction: column;
+    gap: map-get($gap, large);
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .spinning-loader {
+    size: 6rem;
+    display: inline;
+    height: 6rem;
+    width: 6rem;
+  
+    &-title {
+      animation: fade-in 1s alternate-reverse infinite;
+    }
+  }
+  .spinning-loader::after {
+    animation: spinning-loader 1s ease-in-out infinite;
+    border: 0.6rem solid white;
+    border-color: $primary-color transparent $secondary-color
+      transparent;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 6rem;
+    width: 6rem;
+  }
+  @keyframes spinning-loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
