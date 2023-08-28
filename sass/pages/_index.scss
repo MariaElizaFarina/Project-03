@@ -41,7 +41,7 @@ $height: 3rem;
     }
   }
   
-  .-step {
+  .steps {
     @include container;
   
     @include tablet {
@@ -49,20 +49,20 @@ $height: 3rem;
       grid-template-rows: auto;
       grid-template-columns: repeat(3, 1fr);
   
-      > .title {
+      &-title {
         grid-column-end: 4;
         grid-column-start: 1;
         text-align: center;
       }
     }
-  
+
     @include desktop {
       @include container;
       @include backdrop-card;
     }
   }
   
-  .restaurants {
+  .restaurant {
     background-color: map-get($basic-color, lightGray);
     @include container;
   
@@ -73,7 +73,7 @@ $height: 3rem;
     }
   }
   
-  .restaurants-wrapper {
+  .restaurant-wrapper {
     @include container;
     padding: 0;
   
@@ -92,9 +92,9 @@ $height: 3rem;
 
   .step-card {
     @include card;
+    display: flex;
     align-items: center;
     background-color: map-get($basic-color, white);
-    display: flex;
     gap: map-get($gap, base);
     margin-left: calc($width / 2);
   

@@ -1,3 +1,5 @@
+@import "../utilities/variables";
+
 $heart-size: 3.5em;
 
 .heart {
@@ -5,7 +7,7 @@ $heart-size: 3.5em;
   position: relative;
   overflow: hidden;
   place-items: center;
-    // clip-path: url(#heart__clip);
+  clip-path: url(#heart__clip);
   cursor: pointer;
   height: $heart-size;
   width: $heart-size;
@@ -26,19 +28,19 @@ $heart-size: 3.5em;
       height: $heart-size;
       width: $heart-size;
       stroke: black;
-      stroke-width: 7px;
+      stroke-width: 6px;
     }
 
     &-fill {
       background-image: linear-gradient(
        $primary-color,
-       $secondary-color
+       $secondary-color,
       );
       position: absolute;
-      border-radius: 38%;
+      border-radius: 36%;
       bottom: -100%;
       height: 110%;
-      width: 110%;
+      width: 108%;
     }
 
     &:hover &-fill {

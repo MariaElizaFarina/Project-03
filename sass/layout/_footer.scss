@@ -3,23 +3,27 @@
 .footer {
     background-color:map-get($basic-color, dark);
     color: map-get($basic-color, light);
+
+    @include container;
+    @include tablet {
+      align-items: center;
+    }
 }
 
-    .footer-title {
-    &-list {
+    .footer-list {
       display: flex;
       flex-direction: column;
       gap: map-get($gap, small);   
-    }
-    &-icon {
-      min-width: 2.5rem;
-    }
+      
     &-info {
       display: flex;
       flex-direction: column;
-      gap: map-get($gap, small);
       position: relative;
       width: fit-content;
+      gap: map-get($gap, small);
+    &-icon {
+      min-width: 2.5rem;
+    }
   
       &::after {
         margin: 1rem;
@@ -29,9 +33,9 @@
         );
         content: "";
         height: 9px;
+        width: 0%;
         margin-left: 9rem;
         transition: $transition-all-fast;
-        width: 0%;
       }
   
       &:hover {

@@ -10,9 +10,17 @@ color: map-get($basic-color, light);
 padding: map-get($padding , large );
 transition: $transition-all-fast;
 width: fit-content;
+
 &-bold {
 font-weight: 400;
 }
+
+&:active {
+    box-shadow: map-get($shadow, shadow-active);
+transform: translate(3px, 3px);
+}
+}
+
 &:hover {
 background-image: linear-gradient(
 $secondary-color,
@@ -20,9 +28,4 @@ $primary-color,
 );
 box-shadow: map-get($shadow, shadow-down);
 transform: translate(2px, 2px);
-}
-&:active {
-    box-shadow: map-get($shadow, shadow-active);
-transform: translate(3px, 3px);
-}
 }

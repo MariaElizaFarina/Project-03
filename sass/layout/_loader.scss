@@ -21,18 +21,18 @@ $width: 6rem;
   }
 
   .spinning-loader {
-    size: 6rem;
     display: inline;
+    size: 6rem;
     height: $height;
     width: $width;
   
     &-title {
-      animation: fade-in 1s alternate-reverse infinite;
+      animation: fade-in 2s alternate-reverse infinite;
     }
   }
   .spinning-loader::after {
     animation: spinning-loader 1s ease-in-out infinite;
-    border: 0.6rem solid white;
+    border: 0.7rem solid white;
     border-color: $primary-color transparent $secondary-color
       transparent;
     border-radius: 50%;

@@ -28,21 +28,32 @@
       height: 100%;
     }
   
-    &-link {
-      font-size: 2.5rem;
-      justify-self: start;
-      margin-left: map-get($gap, base);
-    }
+    // &-link {
+    //   font-size: 2.5rem;
+    //   justify-self: start;
+    //   margin-left: map-get($gap, base);
+    // }
 
     &-location {
       display: none;
   
       @include tablet {
         display: flex;
-        gap: map-get($gap, base);
+        gap: map-get($gap, gap-base);
         justify-self: end;
         padding: 0 map-get($padding, medium);
       }
-    }
   }
-
+}
+  //------------------------Main Location-----------------------------//
+    .location {
+      background-color: map-get($basic-color, lightGray);
+      display: flex;
+      justify-content: center;
+      gap: map-get($gap, gap-base);
+      padding: map-get($padding, medium);
+    
+      @include tablet {
+        display: none;
+      }
+    }

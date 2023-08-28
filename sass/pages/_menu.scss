@@ -29,9 +29,9 @@
     gap: map-get($gap, gap-base);
     padding: map-get($padding, small) 0;
     &-title::after {
+      display: block;
       border-bottom: 0.3rem solid $tertiary-color;
       content: " ";
-      display: block;
       margin-top: 0.3rem;
       width: 6rem;
     }
@@ -51,33 +51,33 @@
   }
 
   
-//   @for $i from 2 through 4 {
+  // @for $i from 2 through 4 {
 
-//     $duration: 0.3s;
+  //   $duration: 0.3s;
 
-//     $menus: 3;
+  //   $menus: 3;
  
-//     $children: 5;
+  //   $children: 5;
 
-//     $menu-delay: ($duration * $children) * ($i - 2);
-//     .menu-container {
+  //   $menu-delay: ($duration * $children) * ($i - 2);
+  //   .menu-container {
 
-//       & > :nth-child(#{$i}) {
-//         animation: fade-in $duration forwards;
-//         animation-delay: $menu-delay;
-//         opacity: 0%;
+  //     & > :nth-child(#{$i}) {
+  //       animation: fade-in $duration forwards;
+  //       animation-delay: $menu-delay;
+  //       opacity: 0%;
 
-//         @for $x from 1 through 5 {
+  //       @for $x from 1 through 5 {
 
-//           $children-delay: $menu-delay + $duration * ($x - 1);
-//           & > :nth-child(#{$x}) {
-//             animation: fade-in $duration forwards,
-//               translate-up ($duration * 2) forwards;
+  //         $children-delay: $menu-delay + $duration * ($x - 1);
+  //         & > :nth-child(#{$x}) {
+  //           animation: fade-in $duration forwards,
+  //             translate-up ($duration * 2) forwards;
 
-//             animation-timing-function: ease-in-out;
-//             opacity: 0%;
-//           }
-//         }
-//       }
-//     }
-//   }
+  //           animation-timing-function: ease-in-out;
+  //           opacity: 0%;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
