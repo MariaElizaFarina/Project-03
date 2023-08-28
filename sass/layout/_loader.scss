@@ -1,6 +1,9 @@
 
 @import "../utilities/variables";
 
+$height: 6rem;
+$width: 6rem;
+
 .spinning-animation {
     align-items: center;
     animation: opacity-hide 2s forwards, width-hide 2s forwards;
@@ -20,8 +23,8 @@
   .spinning-loader {
     size: 6rem;
     display: inline;
-    height: 6rem;
-    width: 6rem;
+    height: $height;
+    width: $width;
   
     &-title {
       animation: fade-in 1s alternate-reverse infinite;
@@ -35,8 +38,8 @@
     border-radius: 50%;
     content: "";
     display: block;
-    height: 6rem;
-    width: 6rem;
+    height: $height;
+    width: $width;
   }
   @keyframes spinning-loader {
     0% {
