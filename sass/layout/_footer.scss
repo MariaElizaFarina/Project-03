@@ -21,27 +21,28 @@
       position: relative;
       width: fit-content;
       gap: map-get($gap, small);
+      
     &-icon {
       min-width: 2.5rem;
     }
   
-      &::after {
-        margin: 1rem;
-        background-image: linear-gradient(
-          $primary-color,
-          $secondary-color
-        );
-        content: "";
-        height: 9px;
-        width: 0%;
-        margin-left: 9rem;
-        transition: $transition-all-fast;
-      }
+      // &::after {
+      //   margin: 1rem;
+      //   background-image: linear-gradient(
+      //     $primary-color,
+      //     $secondary-color
+      //   );
+      //   content: "";
+      //   height: 9px;
+      //   width: 0%;
+      //   margin-left: 9rem;
+      //   transition: $transition-all-fast;
+      // }
   
-      &:hover {
-        &::after {
-          width: 50%;
-        }
-      }
+      // &:hover {
+      //   &::after {
+      //     width: 50%;
+      //   }
+      // }
     }
   }
