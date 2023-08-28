@@ -179,9 +179,9 @@ button {
 }
 .btn {
   background-image: linear-gradient(#9356DC);
-  box-shadow: 4px 4px 10px #000004;
-  color: white;
-  padding: 3.1rem;
+  border-radius: 9rem;
+  box-shadow: 4px 4px 9px #000004;
+  padding: 2rem 3rem;
   transition: all var(--fast) ease-in-out;
   width: fit-content;
 }
@@ -190,18 +190,18 @@ button {
 }
 .btn:active {
   box-shadow: 4px 4px 4px #000007;
-  transform: translate(3px, 3px);
+  transform: translate(2.8px, 2.8px);
 }
 .btn:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 4px 4px 6px #000006;
-  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 5.8px #000006;
+  transform: translate(1.9px, 1.9px);
 }
 
 .menu-card {
   position: relative;
   border-radius: 2rem;
-  box-shadow: 4px 4px 10px #000004;
+  box-shadow: 4px 4px 9px #000004;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -289,7 +289,7 @@ button {
 .restaurant-card {
   position: relative;
   border-radius: 2rem;
-  box-shadow: 4px 4px 10px #000004;
+  box-shadow: 4px 4px 9px #000004;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -344,7 +344,7 @@ button {
 }
 
 .header {
-  box-shadow: 4px 4px 10px #000004;
+  box-shadow: 4px 4px 9px #000004;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   padding-bottom: 1.4rem;
@@ -516,7 +516,7 @@ button {
 .card-base {
   position: relative;
   border-radius: 2rem;
-  box-shadow: 4px 4px 10px #000004;
+  box-shadow: 4px 4px 9px #000004;
   cursor: pointer;
   align-items: center;
   display: flex;

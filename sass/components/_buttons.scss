@@ -4,10 +4,10 @@
 background-image: linear-gradient(
 $primary-color,
 );
-border-radius: map-get($round, large);
+border-radius: map-get($round, round-large);
 box-shadow: map-get($shadow, shadow-base);
-color: map-get($basic-color, light);
-padding: map-get($padding , large );
+color: map-get($basic-color, white);
+padding: map-get($padding , btn-01 );
 transition: $transition-all-fast;
 width: fit-content;
 
@@ -16,8 +16,8 @@ font-weight: 400;
 }
 
 &:active {
-    box-shadow: map-get($shadow, shadow-active);
-transform: translate(3px, 3px);
+box-shadow: map-get($shadow, shadow-active);
+transform: translate(2.8px, 2.8px);
 }
 &:hover {
 background-image: linear-gradient(
@@ -25,6 +25,6 @@ $secondary-color,
 $primary-color,
 );
 box-shadow: map-get($shadow, shadow-down);
-transform: translate(2px, 2px);
+transform: translate(1.9px, 1.9px);
 }
 }
