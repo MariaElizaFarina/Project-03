@@ -14,7 +14,7 @@
     grid-template-columns: 1fr min-content;
     justify-content: space-between;
   
-    & > .heart {
+    &-heart {
       margin-right: 2rem;
     }
     @include desktop {
@@ -37,7 +37,7 @@
     }
   }
   
-  .menu-container > .btn {
+  .menu-container .btn {
     padding: 10rem;
     margin: 0 auto;
     margin-bottom: map-get($padding, xlarge);

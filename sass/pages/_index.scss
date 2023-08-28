@@ -61,34 +61,6 @@ $height: 3rem;
       @include backdrop-card;
     }
   }
-  
-  .restaurant {
-    background-color: map-get($basic-color, lightGray);
-    @include container;
-  
-    & > .title {
-      @include tablet {
-        text-align: center;
-      }
-    }
-  }
-  
-  .restaurant-wrapper {
-    @include container;
-    padding: 0;
-  
-    @include tablet {
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    @include desktop {
-      align-self: center;
-      grid-template-columns: repeat(4, minmax(25rem, 45rem));
-      max-width: 192rem;
-    }
-  }
 
   .step-card {
     @include card;
@@ -154,5 +126,33 @@ $height: 3rem;
   
     &:hover &-icon {
       color: $primary-color;
+    }
+  }
+
+  .restaurant {
+    background-color: map-get($basic-color, lightGray);
+    @include container;
+  
+    &-title {
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+  
+  .restaurant-wrapper {
+    @include container;
+    padding: 0;
+  
+    @include tablet {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include desktop {
+      align-self: center;
+      grid-template-columns: repeat(4, minmax(25rem, 45rem));
+      max-width: 192rem;
     }
   }
