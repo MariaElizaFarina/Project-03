@@ -4,6 +4,7 @@
 $width: 3rem;
 $height: 3rem;
 
+//---------------------Explore Restaurant & Menus----------------------//
 .top-wrapper {
     @include desktop {
       align-items: center;
@@ -18,9 +19,10 @@ $height: 3rem;
     }
   }
   
-  .explore {
+  .exploring {
     align-items: center;
-    background-color: map-get($basic-color, lightGray);
+    background-color: map-get($basic-color, gray);
+    color: map-get($basic-color, black);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -41,34 +43,15 @@ $height: 3rem;
     }
   }
   
-  .steps {
-    @include container;
-  
-    @include tablet {
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: repeat(3, 1fr);
-  
-      &-title {
-        display: grid;
-        text-align: center;
-        grid-column-end: 4;
-        grid-column-start: 1;
-      }
-    }
-    @include desktop {
-    @include container;
-    @include backdrop-card;
-    }
-  }
-
-  .step-card {
+  //---------------------Card Steps-----------------------------//
+  .card-base {
     @include card;
-    display: flex;
     align-items: center;
-    background-color: map-get($basic-color, white);
-    gap: map-get($gap, base);
+    background-color: map-get($basic-color, lightGray);
+    display: flex;
+    gap: map-get($gap, gap-base);
     margin-left: calc($width / 2);
+
   
     &-number {
       background-color: $primary-color;
@@ -76,6 +59,7 @@ $height: 3rem;
       color: map-get($basic-color, white);
       display: grid;
       height: $height;
+      // Center the number in the left border of the container
       left: calc($width / 2 * -1);
       place-items: center;
       position: absolute;
@@ -85,22 +69,22 @@ $height: 3rem;
   
     &-info {
       align-items: center;
-      border-radius: map-get($round, base);
+      border-radius: map-get($round, round-base);
       display: flex;
-      gap: map-get($gap, base);
+      gap: map-get($gap, gap-base);
       height: 100%;
       overflow: hidden;
-      padding: map-get($padding, base);
-      padding-right: map-get($gap, base);
+      padding: map-get($padding, padding-menu);
+      padding-right: map-get($gap, gap-base);
       position: relative;
       width: 100%;
     }
   
     &-icon {
-      color: map-get($basic-color, gray);;
+      color: gray;
       font-size: 2.5rem;
       min-width: 6.35rem;
-      padding-left: 20%;
+      padding-left: calc(map-get($gap, gap-base) + $width / 2);
       z-index: 10;
     }
   
@@ -109,7 +93,7 @@ $height: 3rem;
     }
   
     &-background {
-      background-color: map-get($basic-color, lightGray);;
+      background-color: $primary-color;
       height: 100%;
       left: -3rem;
       position: absolute;
@@ -129,6 +113,7 @@ $height: 3rem;
     }
   }
 
+  //-----------------------Restaurants Main - Index---------------------------//
   .restaurant {
     background-color: map-get($basic-color, lightGray);
     @include container;

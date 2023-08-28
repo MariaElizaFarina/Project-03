@@ -199,8 +199,8 @@ button {
 }
 
 .menu-card {
-  border-radius: 2rem;
   position: relative;
+  border-radius: 2rem;
   box-shadow: 4px 4px 10px #000004;
   cursor: pointer;
   display: flex;
@@ -287,8 +287,8 @@ button {
 }
 
 .restaurant-card {
-  border-radius: 2rem;
   position: relative;
+  border-radius: 2rem;
   box-shadow: 4px 4px 10px #000004;
   cursor: pointer;
   display: flex;
@@ -488,7 +488,7 @@ button {
   }
 }
 
-.explore {
+.exploring {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -496,14 +496,14 @@ button {
   padding: 4.1rem 0;
   text-align: center;
 }
-.explore-title {
+.exploring-title {
   padding-bottom: 4.1rem;
 }
-.explore-text {
+.exploring-text {
   padding-bottom: 3.1rem;
 }
 @media (min-width: 1400px) {
-  .explore {
+  .exploring {
     display: flex;
     flex-direction: column;
     padding: 4.1rem;
@@ -513,45 +513,17 @@ button {
   }
 }
 
-.steps {
-  display: flex;
-  flex-direction: column;
-  padding: 4.1rem;
-}
-@media (min-width: 768px) {
-  .steps {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .steps-title {
-    display: grid;
-    text-align: center;
-    grid-column-end: 4;
-    grid-column-start: 1;
-  }
-}
-@media (min-width: 1400px) {
-  .steps {
-    display: flex;
-    flex-direction: column;
-    padding: 4.1rem;
-    border-radius: 2rem;
-    backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-}
-
-.step-card {
-  border-radius: 2rem;
+.card-base {
   position: relative;
+  border-radius: 2rem;
   box-shadow: 4px 4px 10px #000004;
   cursor: pointer;
-  display: flex;
   align-items: center;
+  display: flex;
+  gap: 2rem;
   margin-left: 1.5rem;
 }
-.step-card-number {
+.card-base-number {
   background-color: #9356DC;
   border-radius: 50%;
   display: grid;
@@ -562,25 +534,30 @@ button {
   width: 3rem;
   z-index: 10;
 }
-.step-card-info {
+.card-base-info {
   align-items: center;
+  border-radius: 2rem;
   display: flex;
+  gap: 2rem;
   height: 100%;
   overflow: hidden;
-  padding: 2rem 0rem;
+  padding: 10rem;
+  padding-right: 2rem;
   position: relative;
   width: 100%;
 }
-.step-card-icon {
+.card-base-icon {
+  color: gray;
   font-size: 2.5rem;
   min-width: 6.35rem;
-  padding-left: 20%;
+  padding-left: 3.5rem;
   z-index: 10;
 }
-.step-card-text {
+.card-base-text {
   z-index: 10;
 }
-.step-card-background {
+.card-base-background {
+  background-color: #9356DC;
   height: 100%;
   left: -3rem;
   position: absolute;
@@ -590,10 +567,10 @@ button {
   width: 0;
   z-index: 9;
 }
-.step-card:hover .step-card-background {
+.card-base:hover .card-base-background {
   width: 150%;
 }
-.step-card:hover .step-card-icon {
+.card-base:hover .card-base-icon {
   color: #9356DC;
 }
 

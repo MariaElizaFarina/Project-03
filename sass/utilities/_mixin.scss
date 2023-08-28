@@ -2,8 +2,8 @@
 @import "../utilities/variables";
 
 @mixin card {
-    border-radius: map-get($round, round-base);
     position: relative;
+    border-radius: map-get($round, round-base);
     box-shadow: map-get($shadow, shadow-base);
     cursor: pointer;
 
