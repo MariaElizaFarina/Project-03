@@ -228,6 +228,13 @@ button {
 }
 
 .menu-card {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 25px 0 25px 10px;
+  line-height: 40px;
+}
+.menu-card {
   position: relative;
   border-radius: 2rem;
   box-shadow: 4px 4px 9px #000004;

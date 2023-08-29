@@ -3,6 +3,16 @@
 //----------------Menu Card-----------//
 
 .menu-card {
+  @include desktop;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color:map-get($basic-color, white);
+  padding: 25px 0 25px 10px;
+  line-height: 40px;
+}
+
+.menu-card {
   @include card;
   display: flex;
   align-items: center;
