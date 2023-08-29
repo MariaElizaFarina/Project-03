@@ -114,7 +114,7 @@ $height: 3rem;
   }
 
   //-----------------------Restaurants Main - Index---------------------------//
-  .restaurant {
+  .restaurants {
     background-color: map-get($basic-color, lightGray);
     @include container;
   

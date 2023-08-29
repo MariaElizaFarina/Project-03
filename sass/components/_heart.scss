@@ -1,6 +1,6 @@
 @import "../utilities/variables";
 
-$heart-size: 3.5em;
+$heart-size: 1.5em;
 
 .heart {
   display: grid;
@@ -16,14 +16,14 @@ $heart-size: 3.5em;
       position: absolute;
     }
   
-    &-container {
+    &-main {
       display: grid;
       place-items: center;
       height: $heart-size;
       width: $heart-size;
     }
   
-    &-stroke {
+    &-emp {
       fill: transparent;
       height: $heart-size;
       width: $heart-size;

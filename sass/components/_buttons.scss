@@ -2,6 +2,7 @@
 
 .btn {
 background-image: linear-gradient(
+$secondary-color,
 $primary-color,
 );
 border-radius: map-get($round, round-large);
@@ -12,7 +13,7 @@ transition: $transition-all-fast;
 width: fit-content;
 
 &-bold {
-font-weight: 400;
+font-weight: 300;
 }
 
 &:active {

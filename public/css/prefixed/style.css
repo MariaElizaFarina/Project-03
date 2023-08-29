@@ -3,13 +3,17 @@
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 html {
   font-size: 60%;
+}
+@media (min-width: 1400px) {
+  html {
+    font-size: 70%;
+  }
 }
 
 body {
@@ -40,21 +44,21 @@ body {
   font-weight: 100;
 }
 
-h1,
-.menu-text {
+.h1 .menu-text {
   font-family: "Shrikhand", sans-serif;
-  font-size: 2.8rem;
-  font-weight: 100;
+  font-style: oblique;
+  font-size: 20rem;
+  font-weight: 80;
 }
 
-.menu-title {
-  font-weight: 100;
+.menu-section .menu-section-title {
+  font-size: 25px;
+  font-weight: 80;
   text-transform: uppercase;
 }
 
-h3,
-h4 {
-  font-size: 2.4rem;
+.menu-section .h3.h4 {
+  font-size: 100rem;
 }
 
 button {
@@ -103,22 +107,22 @@ button {
   place-items: center;
   clip-path: url(#heart__clip);
   cursor: pointer;
-  height: 3.5em;
-  width: 3.5em;
+  height: 1.5em;
+  width: 1.5em;
 }
 .heart-svg {
   position: absolute;
 }
-.heart-container {
+.heart-main {
   display: grid;
   place-items: center;
-  height: 3.5em;
-  width: 3.5em;
+  height: 1.5em;
+  width: 1.5em;
 }
-.heart-stroke {
+.heart-emp {
   fill: transparent;
-  height: 3.5em;
-  width: 3.5em;
+  height: 1.5em;
+  width: 1.5em;
   stroke: black;
   stroke-width: 6px;
 }
@@ -178,7 +182,7 @@ button {
   }
 }
 .btn {
-  background-image: linear-gradient(#9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   border-radius: 9rem;
   box-shadow: 4px 4px 9px #000004;
   padding: 2rem 3rem;
@@ -186,7 +190,7 @@ button {
   width: fit-content;
 }
 .btn-bold {
-  font-weight: 400;
+  font-weight: 300;
 }
 .btn:active {
   box-shadow: 4px 4px 4px #000007;
@@ -286,36 +290,28 @@ button {
   padding: 3rem 3rem;
 }
 
-.restaurant-card {
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 4px 4px 9px #000004;
-  cursor: pointer;
+.restaurant-main {
   display: flex;
   flex-direction: column;
-  object-fit: cover;
   overflow: hidden;
-  background-color: white;
 }
-
-.restaurant-top {
+.restaurant-main-header {
   position: relative;
 }
-.restaurant-top-img {
-  display: flex;
+.restaurant-main-img {
   height: 18rem;
   object-fit: cover;
   width: 100%;
 }
-.restaurant-top-new {
+.restaurant-main-new {
   background-color: #99E2D0;
-  color: white;
+  color: #99E2D0;
   padding: 0.5rem 3rem;
   position: absolute;
   right: 1.4rem;
   top: 1.4rem;
 }
-.restaurant-top-bottom {
+.restaurant-main-info {
   align-items: center;
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -324,10 +320,10 @@ button {
   padding: 1.4rem;
   position: relative;
 }
-.restaurant-top-bottom > .heart {
+.restaurant-main-info > .heart {
   margin-right: 2rem;
 }
-.restaurant-top::before {
+.restaurant-main::before {
   background-image: linear-gradient(to right, #9356DC, #FF79DA);
   bottom: 0;
   content: "";
@@ -339,7 +335,7 @@ button {
   transition: all var(--fast) ease-in-out;
   width: 100%;
 }
-.restaurant-top:hover::before {
+.restaurant-main:hover::before {
   height: 1rem;
 }
 
@@ -574,13 +570,13 @@ button {
   color: #9356DC;
 }
 
-.restaurant {
+.restaurants {
   display: flex;
   flex-direction: column;
   padding: 4.1rem;
 }
 @media (min-width: 768px) {
-  .restaurant-title {
+  .restaurants-title {
     text-align: center;
   }
 }

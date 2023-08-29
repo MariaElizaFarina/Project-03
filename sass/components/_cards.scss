@@ -88,41 +88,37 @@
 
 //----------------Restaurant Card-----------//
 
-.restaurant-card {
-  @include card;
+.restaurant-main {
+  background-color: map-get($basic-color , white );
   display: flex;
   flex-direction: column;
-  object-fit: cover;
   overflow: hidden;
-  background-color: map-get($basic-color, light);
-}
 
-  .restaurant-top {
+  &-header {
     position: relative;
-  
+  }
   &-img {
-    display: flex;
     height: 18rem;
     object-fit: cover;
     width: 100%;
   }
   &-new {
     background-color: $tertiary-color;
-    border-radius: map-get($round, small);
-    color: map-get($basic-color, light);
-    padding: map-get($padding, btn-02);
+    border-radius:  map-get($round , small);
+    color: $tertiary-color;
+    padding: map-get($padding , btn-02);
     position: absolute;
-    right: map-get($padding, small);
-    top: map-get($padding, small);
+    right: map-get($padding , small);
+    top: map-get($padding , small);
   }
-  &-bottom {
+  &-info {
     align-items: center;
     display: grid;
-    gap: map-get($gap, medium);
+    gap: map-get($gap , medium);
     grid-template-columns: 1fr min-content;
     height: 100%;
     justify-content: space-between;
-    padding: map-get($padding, small);
+    padding: map-get($padding , small);
     position: relative;
     & > .heart {
       margin-right: 2rem;
@@ -132,8 +128,8 @@
   &::before {
     background-image: linear-gradient(
       to right,
-       $primary-color,
-       $secondary-color
+      $primary-color,
+      $secondary-color,
     );
     bottom: 0;
     content: "";
