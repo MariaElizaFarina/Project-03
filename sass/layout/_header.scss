@@ -27,31 +27,27 @@
     &-logo {
       height: 100%;
     }
-  
-    // &-link {
-    //   font-size: 2.5rem;
-    //   justify-self: start;
-    //   margin-left: map-get($gap, base);
-    // }
 
     &-location {
       display: none;
   
       @include tablet {
-        display: flex;
-        gap: map-get($gap, gap-base);
+        display:flex;
+        gap: map-get($gap, small);
         justify-self: end;
-        padding: 0 map-get($padding, medium);
+        padding: 0 10px 0 10px;
       }
   }
 }
   //------------------------Main Location-----------------------------//
     .location {
       background-color: map-get($basic-color, lightGray);
-      display: flex;
+      display: grid;
+      grid-template-rows: auto;
+      grid-auto-flow: row;
       justify-content: center;
-      gap: map-get($gap, gap-base);
-      padding: map-get($padding, medium);
+      gap: map-get($gap, small);
+      padding: map-get($padding, large);
     
       @include tablet {
         display: none;
