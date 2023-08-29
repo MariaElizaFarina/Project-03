@@ -235,7 +235,6 @@ button {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: white;
 }
 .menu-card-info {
   flex: 1 1 0;
@@ -286,8 +285,8 @@ button {
 }
 .menu-container {
   border-radius: 6rem 6rem 0 0;
-  margin-top: -6rem;
-  min-height: 50rem;
+  margin: 30px 0 30px 10px;
+  min-height: 20rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -295,24 +294,15 @@ button {
 }
 @media (min-width: 768px) {
   .menu-container {
-    margin-left: auto;
-    margin-right: auto;
     max-width: 90rem;
   }
 }
 @media (min-width: 1400px) {
   .menu-container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, minmax(35rem, 33%));
-    max-width: 192rem;
+    max-width: 100rem;
   }
-}
-
-.components {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  padding: 3rem 3rem;
 }
 
 .restaurant-main {
