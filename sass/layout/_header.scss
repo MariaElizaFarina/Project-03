@@ -4,7 +4,7 @@
     background-color: map-get($basic-color, white);
     box-shadow: map-get($shadow, shadow-base);
     display: grid;
-    grid-template-columns: 1fr min-content 1fr;
+    grid-template-columns: 2fr min-content 1fr;
     padding-bottom: map-get($padding, small);
     padding-top: map-get($padding, medium);
     place-items: center;

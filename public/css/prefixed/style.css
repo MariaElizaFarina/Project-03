@@ -180,7 +180,7 @@ body {
 .header {
   box-shadow: 4px 4px 9px #000004;
   display: grid;
-  grid-template-columns: 1fr min-content 1fr;
+  grid-template-columns: 2fr min-content 1fr;
   padding-bottom: 1.4rem;
   padding-top: 2.2rem;
   place-items: center;
