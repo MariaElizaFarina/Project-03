@@ -1,18 +1,18 @@
 @import "./utilities/variables";
 @import "./utilities/mixin";
+@import "./utilities/heartAnimation";
 
 @import "./base/base";
 @import "./base/typography";
 
-@import "./components/heart";
+@import "./layout/header";
+
 @import "./layout/loader";
 @import "./components/buttons";
+@import "./components/heart";
 @import "./components/cards";
-
-@import "./layout/header";
 @import "./layout/footer";
-@import "./utilities/animation";
-  
+
 @import "./pages/index";
 @import "./pages/menu";
 
