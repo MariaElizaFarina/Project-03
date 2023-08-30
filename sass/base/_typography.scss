@@ -5,11 +5,11 @@
 
 body {
 font-family: "Roboto", sans-serif;
-font-size: 2.1rem;
+font-size: 1.95rem;
 font-weight: 100;
 }
 
-.h1 .menu-text {
+.h1 .menu-description {
 font-family: "Shrikhand", sans-serif;
 font-style: oblique;
 font-size: 20rem;
@@ -28,29 +28,27 @@ font-size: 100rem;
 
 button {
 font-family:"Roboto", sans-serif;
-font-size: 2.1rem;
+font-size: 1.9rem;
 font-weight: 380;
 }
 
-.menu-price {
+.card-price {
 font-weight: bold;
 }
 
-.restaurant-card {
+.restaurant-main {
 font-weight: 450;
 }
 
-.location,
+.location
 .header-location {
 font-size: 1.7rem;
 font-weight: 400;
-text-indent: 10px;
 }
 
-.step-text {
-font-size: 1.7rem;
+.card-text {
+font-size: 2rem;
 font-weight: 400;
-padding: map-get($padding , xlarge );
 }
 
 .spinning-title {
@@ -62,13 +60,13 @@ font-weight: 100;
 .footer {
 &-title {
 font-family: "Shrikhand", sans-serif;
-font-size: 2.2rem;
+font-size: 2.4rem;
 font-weight: 100;
 line-height: 50px;
 }
 
 &-info {
-font-size: 1.8rem;
+font-size: 2rem;
 line-height: 30px;
 padding-left: 2px;
 }

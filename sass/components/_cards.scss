@@ -109,16 +109,16 @@
     position: relative;
   }
   &-img {
-    height: 18rem;
+    height: 50rem;
     object-fit: cover;
     width: 100%;
   }
   &-new {
+    position: absolute;
     background-color: $tertiary-color;
     border-radius:  map-get($round , small);
     color: $tertiary-color;
     padding: map-get($padding , btn-02);
-    position: absolute;
     right: map-get($padding , small);
     top: map-get($padding , small);
   }
@@ -131,32 +131,33 @@
     justify-content: space-between;
     padding: map-get($padding , small);
     position: relative;
-    & > .heart {
+  }
+    &-heart {
       margin-right: 2rem;
     }
   }
 
-  &::before {
-    background-image: linear-gradient(
-      to right,
-      $primary-color,
-      $secondary-color,
-    );
-    bottom: 0;
-    content: "";
-    display: inline-block;
-    height: 0%;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    transition: $transition-all-fast;
-    width: 100%;
-  }
+  // &::before {
+  //   background-image: linear-gradient(
+  //     to right,
+  //     $primary-color,
+  //     $secondary-color,
+  //   );
+  //   bottom: 0;
+  //   content: "";
+  //   display: inline-block;
+  //   height: 0%;
+  //   left: 0;
+  //   overflow: hidden;
+  //   position: absolute;
+  //   transition: $transition-all-fast;
+  //   width: 100%;
+  // }
 
-  &:hover {
-    &::before {
-      height: 1rem;
-    }
-  }
-}
+  // &:hover {
+  //   &::before {
+  //     height: 1rem;
+  //   }
+  // }
+
 

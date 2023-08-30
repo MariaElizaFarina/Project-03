@@ -3,6 +3,7 @@
 *,
 *::after,
 *::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +13,7 @@ html {
 }
 @media (min-width: 1400px) {
   html {
-    font-size: 70%;
+    font-size: 60%;
   }
 }
 
@@ -40,11 +41,11 @@ img {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 2.1rem;
+  font-size: 1.95rem;
   font-weight: 100;
 }
 
-.h1 .menu-text {
+.h1 .menu-description {
   font-family: "Shrikhand", sans-serif;
   font-style: oblique;
   font-size: 20rem;
@@ -63,29 +64,26 @@ body {
 
 button {
   font-family: "Roboto", sans-serif;
-  font-size: 2.1rem;
+  font-size: 1.9rem;
   font-weight: 380;
 }
 
-.menu-price {
+.card-price {
   font-weight: bold;
 }
 
-.restaurant-card {
+.restaurant-main {
   font-weight: 450;
 }
 
-.location,
-.header-location {
+.location .header-location {
   font-size: 1.7rem;
   font-weight: 400;
-  text-indent: 10px;
 }
 
-.step-text {
-  font-size: 1.7rem;
+.card-text {
+  font-size: 2rem;
   font-weight: 400;
-  padding: 4.1rem;
 }
 
 .spinning-title {
@@ -96,12 +94,12 @@ button {
 
 .footer-title {
   font-family: "Shrikhand", sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 100;
   line-height: 50px;
 }
 .footer-info {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 30px;
   padding-left: 2px;
 }
@@ -163,7 +161,7 @@ button {
     bottom: 0;
   }
 }
-.spinning-animation {
+.load-animation {
   align-items: center;
   animation: opacity-hide 2s forwards, width-hide 2s forwards;
   display: flex;
@@ -178,24 +176,24 @@ button {
 }
 
 .spinning-loader {
-  display: inline;
-  size: 6rem;
+  display: inline-block;
+  size: 5em;
   height: 6rem;
   width: 6rem;
 }
 .spinning-loader-title {
-  animation: fade-in 2s alternate-reverse infinite;
+  animation: fade-in 0.9s alternate-reverse infinite;
 }
 
 .spinning-loader::after {
-  animation: spinning-loader 1s ease-in-out infinite;
-  border: 0.7rem solid white;
-  border-color: #9356DC transparent #FF79DA transparent;
-  border-radius: 50%;
-  content: "";
   display: block;
+  border-color: #9356DC transparent #FF79DA transparent;
+  animation: spinning-loader 0.8s ease-in-out infinite;
   height: 6rem;
   width: 6rem;
+  border: 0.7rem solid white;
+  border-radius: 45%;
+  content: "";
 }
 
 @keyframes spinning-loader {
@@ -321,15 +319,15 @@ button {
   position: relative;
 }
 .restaurant-main-img {
-  height: 18rem;
+  height: 50rem;
   object-fit: cover;
   width: 100%;
 }
 .restaurant-main-new {
+  position: absolute;
   background-color: #99E2D0;
   color: #99E2D0;
   padding: 0.5rem 3rem;
-  position: absolute;
   right: 1.4rem;
   top: 1.4rem;
 }
@@ -342,23 +340,8 @@ button {
   padding: 1.4rem;
   position: relative;
 }
-.restaurant-main-info > .heart {
+.restaurant-main-heart {
   margin-right: 2rem;
-}
-.restaurant-main::before {
-  background-image: linear-gradient(to right, #9356DC, #FF79DA);
-  bottom: 0;
-  content: "";
-  display: inline-block;
-  height: 0%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  transition: all var(--fast) ease-in-out;
-  width: 100%;
-}
-.restaurant-main:hover::before {
-  height: 1rem;
 }
 
 .header {
@@ -538,31 +521,30 @@ button {
   cursor: pointer;
   align-items: center;
   display: flex;
-  gap: 2rem;
-  margin-left: 1.5rem;
+  padding: 15px;
+  margin: 15px;
 }
 .card-base-number {
   background-color: #9356DC;
-  border-radius: 50%;
+  border-radius: 70%;
   display: grid;
   height: 3rem;
-  left: -1.5rem;
   place-items: center;
-  position: absolute;
-  width: 3rem;
-  z-index: 10;
+  position: initial;
+  width: 50%;
+  padding-right: 10px;
 }
 .card-base-info {
-  align-items: center;
+  align-items: end;
   border-radius: 2rem;
-  display: flex;
+  display: grid;
   gap: 2rem;
-  height: 100%;
   overflow: hidden;
-  padding: 10rem;
+  padding: 2.2rem;
   padding-right: 2rem;
   position: relative;
   width: 100%;
+  height: 100%;
 }
 .card-base-icon {
   color: gray;
@@ -574,22 +556,33 @@ button {
 .card-base-text {
   z-index: 10;
 }
-.card-base-background {
-  background-color: #9356DC;
-  height: 100%;
-  left: -3rem;
-  position: absolute;
-  top: 0;
-  transform: skewX(-45deg);
-  transition: all 0.5s ease-in-out;
-  width: 0;
-  z-index: 9;
-}
 .card-base:hover .card-base-background {
   width: 150%;
 }
 .card-base:hover .card-base-icon {
   color: #9356DC;
+}
+
+.card-number {
+  background-color: #9356DC;
+  border-radius: 90%;
+  align-items: flex-start;
+  display: grid;
+  height: 3rem;
+  place-items: center;
+  position: inherit;
+  margin-left: -35px;
+  width: 15%;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0 0 2px;
+}
+
+.card-text {
+  padding-left: 9px;
 }
 
 .restaurants {
@@ -622,6 +615,12 @@ button {
     grid-template-columns: repeat(4, minmax(25rem, 45rem));
     max-width: 192rem;
   }
+}
+
+.restaurant-wrapper {
+  display: contents;
+  align-self: center;
+  max-width: 50%;
 }
 
 .menu-section {

@@ -5,7 +5,7 @@ $height: 6rem;
 $width: 6rem;
 
 //-----------------------Spinning Animation--------------------------//
-.spinning-animation {
+.load-animation {
     align-items: center;
     animation: opacity-hide 2s forwards, width-hide 2s forwards;
     background-color: map-get($basic-color, white);
@@ -21,28 +21,29 @@ $width: 6rem;
     z-index: 100;
   }
 
-  //-------------------------Spinning Loader icon---------------------------------------//
+  //-------------------------Spinning Loader Icon---------------------------------------//
   .spinning-loader {
-    display: inline;
-    size: 6rem;
+    display: inline-block;
+    size: 5em;
     height: $height;
     width: $width;
   
     &-title {
-      animation: fade-in 2s alternate-reverse infinite;
+      animation: fade-in 0.9s alternate-reverse infinite;
     }
   }
   .spinning-loader::after {
-    animation: spinning-loader 1s ease-in-out infinite;
-    border: 0.7rem solid white;
-    border-color: $primary-color transparent $secondary-color
-      transparent;
-    border-radius: 50%;
-    content: "";
     display: block;
+    border-color: $primary-color transparent $secondary-color
+    transparent;
+    animation: spinning-loader 0.8s ease-in-out infinite;
     height: $height;
     width: $width;
+    border: 0.7rem solid white;
+    border-radius: 45%;
+    content: "";
   }
+
   @keyframes spinning-loader {
     0% {
       transform: rotate(0deg);
