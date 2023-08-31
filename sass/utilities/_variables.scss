@@ -10,8 +10,8 @@ $basic-color: (
 "light": white,
 "dark": black,
 "darkGray": gray,
-"lightGray": lightgrey,
-
+"lightGray": rgb(180, 180, 180),
+"darkGreen": darkgreen,
 );
 
 $padding: (
@@ -24,6 +24,7 @@ $padding: (
 "large": 3.1rem,
 "xlarge": 4.1rem,
 "padding-menu": 10rem,
+"padding-menu-new": -19rem,
 );
 
 $gap: (

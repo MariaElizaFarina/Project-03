@@ -1,55 +1,89 @@
 @import "../utilities/variables";
 
-.header {
-    background-color: map-get($basic-color, white);
-    box-shadow: map-get($shadow, shadow-base);
-    display: grid;
-    grid-template-columns: 2fr min-content 1fr;
-    padding-bottom: map-get($padding, small);
-    padding-top: map-get($padding, medium);
-    place-items: center;
-    position: relative;
-    text-align: center;
-  
-    &-home {
-      @include tablet {
-        grid-template-columns: 0 1fr 1fr;
-      }
-    }
-  
-    &-title {
-      display: grid;
-      justify-content: start;
-      padding: 9px map-get($padding, medium);
-      width: 100%;
-    }
-  
-    &-logo {
-      height: 100%;
-    }
 
-    &-location {
-      display: none;
-  
-      @include tablet {
-        display:flex;
-        gap: map-get($gap, small);
-        justify-self: end;
-        padding: 0 10px 0 10px;
-      }
+//------------------Header Restaurant----------------------//
+
+.header {
+  background-color: map-get($basic-color, white);
+  box-shadow: map-get($shadow, shadow-base);
+  display: grid;
+  grid-template-columns: 2fr min-content 1fr;
+  padding-bottom: map-get($padding, small);
+  padding-top: map-get($padding, medium);
+  place-items: center;
+  position: relative;
+  text-align: center;
+
+  &-home {
+    @include tablet {
+      grid-template-columns: 0 1fr 1fr;
+    }
+  }
+
+  &-title {
+    display: grid;
+    justify-content: start;
+    padding: 9px map-get($padding, medium);
+    width: 100%;
+  }
+
+  &-logo {
+    height: 100%;
+  }
+
+  &-location {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      gap: map-get($gap, small);
+      justify-self: end;
+      padding: 0 10px 0 10px;
+    }
   }
 }
-  //------------------------Main Location-----------------------------//
-    .location {
-      background-color: map-get($basic-color, lightGray);
-      display: grid;
-      grid-template-rows: auto;
-      grid-auto-flow: row;
-      justify-content: center;
-      gap: map-get($gap, small);
-      padding: map-get($padding, large);
-    
-      @include tablet {
-        display: none;
-      }
-    }
+
+//-------------------Header Menu----------------------//
+
+.header-menu {
+  background-color: map-get($basic-color, white);
+  box-shadow: map-get($shadow, shadow-base);
+  display: flex;
+  grid-template-columns: 2fr min-content 1fr;
+  padding-bottom: map-get($padding, small);
+  padding-top: map-get($padding, medium);
+  place-items: center;
+  position: relative;
+  text-align: center;
+
+  &-link {
+   display: grid;
+   justify-self: start;
+   font-size: 2.5rem;
+   margin-left: map-get($gap , gap-base);
+   }
+
+  &-title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 0 10px 0;
+   width: 100%;
+   }
+ }
+
+//------------------------Main Location-----------------------------//
+
+.location {
+  background-color: map-get($basic-color, lightGray);
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  justify-content: center;
+  gap: map-get($gap, small);
+  padding: map-get($padding, large);
+
+  @include tablet {
+    display: none;
+  }
+}

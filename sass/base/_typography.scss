@@ -19,15 +19,16 @@ font-weight: 80;
 }
 
 .menu-section .menu-section-title {
-font-size: 25px;
+font-size: 24px;
 font-weight: 80;
 text-transform: uppercase;
 }
 
 .menu-text {
-    font-size: 35px;
+    font-family: "Shrikhand", sans-serif;
+    font-size: 46px;
     font-style: oblique;
-    font-weight: 900;
+    font-weight: 400;
 }
 
 .menu-section .h3.h4 {
@@ -58,10 +59,15 @@ font-weight: bold;
 font-weight: 450;
 }
 
+.restaurant-main-new {
+font-weight: 450;
+color: map-get($basic-color, darkGreen);
+}
+
 .location
 .header-location {
-font-size: 1.7rem;
-font-weight: 400;
+font-size: 1.8rem;
+font-weight: 200;
 }
 
 .card-text {

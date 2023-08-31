@@ -4,26 +4,21 @@
 
 .menu-card {
   @include desktop;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  background-color:map-get($basic-color, white);
-  padding: 25px 0 25px 10px;
-  line-height: 40px;
-}
-
-.menu-card {
   @include card;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color:map-get($basic-color, white);
+  background-color:map-get($basic-color, lightGray);
+  padding: 25px 0 25px 10px;
+  line-height: 40px;
+}
 
-  &-info {
+  .card-info {
+    @include desktop;
+    display: flex;
     flex: 1 1 0;
-    min-width: 0;
-    padding: map-get($padding, small);
-  }
+    padding: map-get($padding , medium );
+  
   &-title {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -34,9 +29,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-  &-price {
-    padding: map-get($padding, small);
   }
   &-button {
     align-items: center;
@@ -50,14 +42,14 @@
   }
   &-icon {
     color: map-get($basic-color, light);
-    font-size: 3rem;
+    font-size: 3.1rem;
   }
   &:hover &-button {
     width: 8rem;
   }
 
-  &:hover &-button > i {
-    animation: rotate var(--slow);
+  &:hover &-button i {
+    animation: rotate $transition-all-slow;
   }
 }
 
@@ -70,32 +62,26 @@
   }
 }
 
-.menu-container {
+.menu-page-ctn {
   background-color: map-get($basic-color , lightGray );
-  border-radius: map-get($round, round-medium) map-get($round, round-medium)  0 0;
-  margin: 30px 0 30px 10px;
-  min-height: 20rem;
+  border-radius: 90px;
+  margin: calc(6 * -1);
+  min-height: 50rem;
   position: relative;
   @include container;
   @include tablet {
-    // margin-left: auto;
-    // margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 90rem;
   }
   @include desktop {
     display: flex;
     grid-template-columns: repeat(3, minmax(35rem, 33%));
-    max-width: 100rem;
+    max-width: 90rem;
+    background-color: map-get($basic-color , lightGray );
+    border-radius: 90px;
   }
 }
-
-// .components {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   gap: 4rem;
-//   padding: 30rem 30rem;
-// }
 
 //----------------Restaurant Card-----------//
 
@@ -120,7 +106,8 @@
     color: $tertiary-color;
     padding: map-get($padding , btn-02);
     right: map-get($padding , small);
-    top: map-get($padding , small);
+    top: map-get($padding , padding-menu-new);
+    color: black;
   }
   &-info {
     align-items: center;
@@ -135,6 +122,10 @@
     &-heart {
       margin-right: 2rem;
     }
+  }
+
+  .restaurants-main {
+    background-color: map-get($basic-color , lightGray );
   }
 
   // &::before {

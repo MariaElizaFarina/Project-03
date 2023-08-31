@@ -5,6 +5,7 @@ $width: 3rem;
 $height: 3rem;
 
 //---------------------Explore Restaurant & Menus----------------------//
+
 .top-wrapper {
     @include desktop {
       align-items: center;
@@ -133,6 +134,11 @@ $height: 3rem;
       }
     }
   }
+
+  .restaurants-title {
+    padding: 0 600px 15px 0;
+
+  }
   
   .restaurant-wrapper {
     @include container;
@@ -157,3 +163,4 @@ $height: 3rem;
       max-width: 50%;
       background-color: map-get($basic-color , lightGray);
   }
+  

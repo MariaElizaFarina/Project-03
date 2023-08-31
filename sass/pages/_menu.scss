@@ -2,26 +2,37 @@
 
 @import "../utilities/variables";
 
-
-.menu-section {
-  display: flex;
-  flex-direction: column;
-  gap: map-get($gap, gap-base);
-  padding: map-get($padding, small) 0;
-
-  &-title::after {
-    border-bottom: 0.4rem solid $tertiary-color;
-    content: " ";
-    display:none;
-    margin-top: 0.5rem;
-    width: 7rem;
-  }
-}
-
-.top-image {
+.menu-top-image {
   height: 25rem;
   object-fit: cover;
   width: 100%;
+}
+
+.menu-page-ctn {
+  margin: 0 auto;
+  margin-bottom: map-get($padding, xlarge);
+  margin-top: map-get($padding, medium);
+  padding-left: map-get($padding, padding-menu);
+  padding-right: map-get($padding, padding-menu);
+  @include desktop {
+    grid-column-end: 4;
+    grid-column-start: 1;
+  }
+}
+
+.menu-section {
+  display:flex;
+  flex-direction: column;
+  gap: map-get($gap, gap-base);
+  padding: 35px 0 20px 0;
+
+  &-title {
+    display: block;
+    justify-content: space-between;
+    border-bottom: 0.5rem solid $tertiary-color;
+    margin-top: 0.4rem;
+    width: 8rem;
+  }
 }
 
 .menu-title {
@@ -39,30 +50,19 @@
   }
 }
 
-.menu-container {
+.btn {
   margin: 0 auto;
   margin-bottom: map-get($padding, xlarge);
   margin-top: map-get($padding, medium);
   padding-left: map-get($padding, padding-menu);
   padding-right: map-get($padding, padding-menu);
-  @include desktop {
-    grid-column-end: 4;
-    grid-column-start: 1;
-  }
-}
-  .btn {
-    margin: 0 auto;
-    margin-bottom: map-get($padding, xlarge);
-    margin-top: map-get($padding, medium);
-    padding-left: map-get($padding, padding-menu);
-    padding-right: map-get($padding, padding-menu);
     @include desktop {
-      grid-column-end: 4;
-      grid-column-start: 1;
+     grid-column-end: 4;
+     grid-column-start: 1;
   }
 }
 
-// Animation
+// ---------------Menu Card Animation----------------------//
 
 @for $i from 2 through 4 {
 
@@ -71,16 +71,16 @@
   $children: 5;
   $menu-delay: ($duration * $children) * ($i - 2);
 
-  .menu-container {
-    & > :nth-child(#{$i}) {
+  .menu-page-ctn {
+    & :nth-child(#{$i}) {
       animation: fade-in $duration forwards;
       animation-delay: $menu-delay;
       opacity: 0%;
 
-      @for $x from 1 through 5 {
+      @for $x from 1 through 4 {
  
         $children-delay: $menu-delay + $duration * ($x - 1);
-        & > :nth-child(#{$x}) {
+        & :nth-child(#{$x}) {
           animation: fade-in $duration forwards,
           translate-up ($duration * 2) forwards;
           animation-delay: $children-delay;
