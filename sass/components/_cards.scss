@@ -1,56 +1,57 @@
 @import "../utilities/variables";
 
 //----------------Menu Card-----------//
-
-.menu-card {
-  @include desktop;
-  @include card;
+b {
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  background-color:map-get($basic-color, lightGray);
-  padding: 25px 0 25px 10px;
-  line-height: 40px;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin: -42px 0 10px 10px;
 }
 
-  .card-info {
-    @include desktop;
-    display: flex;
-    flex: 1 1 0;
-    padding: map-get($padding , medium );
-  
-  &-title {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+.menu-card {
+  @include card;
+  @include desktop;
+  display: grid;
+  flex-direction: column;
 
-  &-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  background-color:map-get($basic-color, lightGray);
+  padding: 25px 80px 25px 20px;
+  line-height: 40px;
+
+  &-info {
+    flex: 1 1 0;
   }
-  &-button {
-    align-items: center;
-    align-self: stretch;
-    background-color: $tertiary-color;
+  // &-title {
+  //   // overflow: hidden;
+  //   // text-overflow: ellipsis;
+  //   // white-space: nowrap;
+  // }
+  // &-description {
+  //   // overflow: hidden;
+  //   // text-overflow: ellipsis;
+  // }
+}
+  .menu-button {
     display: flex;
     justify-content: center;
+    align-self: stretch;
+    background-color: $tertiary-color;
     overflow: hidden;
     transition: $transition-all-slow;
-    width: 0rem;
-  }
-  &-icon {
-    color: map-get($basic-color, light);
-    font-size: 3.1rem;
-  }
-  &:hover &-button {
-    width: 8rem;
+    height: 100%;
+    width: 100%;
+    &:hover {
+      width: 10rem;
+    }
+    &:hover {
+      animation: rotate $transition-all-slow;
+    }
   }
 
-  &:hover &-button i {
-    animation: rotate $transition-all-slow;
-  }
+ .menu-icon {
+  display: flex;
+  color: map-get($basic-color, light);
+  font-size: 3.1rem;
 }
 
 @keyframes rotate {
@@ -64,38 +65,45 @@
 
 .menu-page-ctn {
   background-color: map-get($basic-color , lightGray );
-  border-radius: 90px;
-  margin: calc(6 * -1);
-  min-height: 50rem;
-  position: relative;
+  // border-radius: 90px;
+  // margin: calc(6 * -1);
+  // min-height: 50rem;
+  // position: relative;
   @include container;
   @include tablet {
     margin-left: auto;
     margin-right: auto;
     max-width: 90rem;
   }
-  @include desktop {
-    display: flex;
-    grid-template-columns: repeat(3, minmax(35rem, 33%));
-    max-width: 90rem;
-    background-color: map-get($basic-color , lightGray );
-    border-radius: 90px;
-  }
+  // @include desktop {
+  //   display: flex;
+  //   grid-template-columns: repeat(3, minmax(35rem, 33%));
+  //   max-width: 90rem;
+  //   // background-color: map-get($basic-color , lightGray );
+  //   // border-radius: 90px;
+  // }
 }
 
 //----------------Restaurant Card-----------//
 
 .restaurant-main {
-  background-color: map-get($basic-color , white );
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  background-color: map-get($basic-color , light );
+  border-radius: 5rem;
+  -webkit-box-shadow: -1px 7px 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px 7px 15px 5px rgba(0, 0, 0, 0.3);
+  height: 15rem;
+  width: 20rem;
+  transition: transform 400ms;
+  // display: flex;
+  // flex-direction: column;
+  // overflow: hidden;
 
   &-header {
     position: relative;
   }
   &-img {
-    height: 50rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 450px;
     object-fit: cover;
     width: 100%;
   }
@@ -126,29 +134,5 @@
 
   .restaurants-main {
     background-color: map-get($basic-color , lightGray );
-  }
-
-  // &::before {
-  //   background-image: linear-gradient(
-  //     to right,
-  //     $primary-color,
-  //     $secondary-color,
-  //   );
-  //   bottom: 0;
-  //   content: "";
-  //   display: inline-block;
-  //   height: 0%;
-  //   left: 0;
-  //   overflow: hidden;
-  //   position: absolute;
-  //   transition: $transition-all-fast;
-  //   width: 100%;
-  // }
-
-  // &:hover {
-  //   &::before {
-  //     height: 1rem;
-  //   }
-  // }
-
+}
 
