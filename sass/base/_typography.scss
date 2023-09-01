@@ -49,10 +49,19 @@ h1,
   }
 }
 
-.location,
+.location {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
 .navigation-description {
   font-size: 1.7rem;
   font-weight: 500;
+
+  &-icon {
+    color: $darkGray-color;
+    font-size: 2.5rem;
+  }
 }
 
 .loader-title {

@@ -66,16 +66,21 @@
 
 .navigation-card {
   @include card;
-  align-items: center;
-  background-color: $lightGray-color;
   display: flex;
-  gap: map-get($gap , gap-base);
-  margin-left: calc(map-get($width, header-width) / 10);
+  align-items: start;
+  justify-content: start;
+  background-color: $lightGray-color;
+  line-height: 20px;
+  gap: map-get($gap , gap-large);
+  margin: 20px;
+  padding: 5px;
+  width: 500px;
+
 }
 
   .navigation-number {
     background-color: $primary-color;
-    border-radius: 50%;
+    border-radius: 100%;
     color: $base-white-color;
     display: grid;
     height: map-get($height , header-height);
@@ -84,8 +89,9 @@
     position: absolute;
     width: map-get($width, header-width);
     z-index: 10;
+  }
 
-  &-description {
+  .navigation-description {
     align-items: center;
     border-radius: map-get($round, round-base);
     display: flex;
@@ -98,18 +104,14 @@
     width: map-get($width , base-width);
   }
 
-  &-icon {
-    color: gray;
-    font-size: 2.5rem;
-    min-width: 6.35rem;
-    padding-left: calc(map-get($gap, gap-base) + map-get($width, header-width) / 2);
-    z-index: 10;
+  .navigation-icon {
+    display: flex;
+    min-width: 6rem;
   }
 
-  &-text {
-    z-index: 10;
-  }
-  }
+  // .navigation-text {
+  //   z-index: 10;
+  // }
 
   .navigation-background {
     background-color: $lightSecondary-color;
@@ -122,11 +124,8 @@
     width: 0;
     z-index: 9;
 
-  &:hover &-background {
-    width: 150%;
+    &:hover {
+      width: 150%;
+    }
   }
 
-  &:hover &-icon {
-    color: $primary-color;
-  }
-}
