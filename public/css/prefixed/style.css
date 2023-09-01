@@ -572,9 +572,10 @@ h1,
   display: flex;
   align-items: start;
   padding-right: 600px;
+  margin-top: 18px;
 }
 .arrow:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
   transition-delay: 0.5s;
   cursor: pointer;
 }
