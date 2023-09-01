@@ -1,48 +1,53 @@
 @import "../utilities/variables";
 
 .footer {
-    background-color:map-get($basic-color, dark);
-    color: map-get($basic-color, light);
-
-    @include container;
+  background-color: $darkGray-color;
+  color: $base-white-color;
+  display: flex;
+  flex-direction: row;
+  @include container;
+  @include tablet {
+    align-items: center;
+  }
+  &-list {
+    display: flex;
+    flex-direction: row;
+    gap: map-get($gap , gap-small);
     @include tablet {
-      align-items: center;
-    }
-}
-
-    .footer-list {
-      display: flex;
-      flex-direction: column;
-      gap: map-get($gap, small);   
-      
-    &-info {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      width: fit-content;
-      gap: map-get($gap, small);
-      
-    &-icon {
-      min-width: 2.5rem;
-    }
-  
-      // &::after {
-      //   margin: 1rem;
-      //   background-image: linear-gradient(
-      //     $primary-color,
-      //     $secondary-color
-      //   );
-      //   content: "";
-      //   height: 9px;
-      //   width: 0%;
-      //   margin-left: 9rem;
-      //   transition: $transition-all-fast;
-      // }
-  
-      // &:hover {
-      //   &::after {
-      //     width: 50%;
-      //   }
-      // }
+      flex-direction: row;
+      gap: calc(map-get($gap , gap-large) * 2);
     }
   }
+  &-icon {
+    min-width: 2.5rem;
+  }
+
+  &-description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    gap: calc(map-get($gap , gap-small) / 2);
+
+    &::after {
+      background-image: linear-gradient(
+       $primary-color,
+       $secondary-color,
+      );
+      content: "";
+      height: 3px;
+      margin-left: calc(map-get($margin , margin-base) * -1);
+      transition: $transition-all-fast;
+      width: 0%;
+    }
+
+    &:hover {
+      transform: scale(0.9);
+      transition-delay: 0.5s;
+      cursor: pointer;
+      &::after {
+        width: calc(100% + map-get($margin , margin-base) * 2);
+      }
+    }
+  }
+}

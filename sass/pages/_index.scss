@@ -1,166 +1,85 @@
 //everything with have to do with the index, besides the header and the footer
 @import "../utilities/variables";
-
-$width: 3rem;
-$height: 3rem;
-
 //---------------------Explore Restaurant & Menus----------------------//
 
-.top-wrapper {
-    @include desktop {
-      align-items: center;
-      background-image: url(../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-      background-size: cover;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20rem;
-      height: auto;
-      justify-content: center;
-      padding: map-get($padding, large);
+.top {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+    background-size: cover;
+    gap: map-get($gap , gap-index);
+    height: auto;
+    padding: calc(map-get($padding, large) * 3) map-get($padding, medium);
+  }
+}
+
+.explore {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: map-get($padding, xlarge) 0;
+
+  &-title {
+    padding-bottom: map-get($padding, xlarge)
+  }
+
+  &-description {
+    padding-bottom: map-get($padding, large)
+  }
+
+}
+
+.navigation {
+  @include container;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    &-title {
+      grid-column-end: 4;
+      grid-column-start: 1;
+      text-align: center;
     }
   }
-  
-  .exploring {
-    align-items: center;
-    background-color: map-get($basic-color, gray);
-    color: map-get($basic-color, black);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: map-get($padding, xlarge) 0;
-    text-align: center;
-  
-    &-title {
-      padding-bottom: map-get($padding, xlarge);
-    }
-  
-    &-text {
-      padding-bottom: map-get($padding, large);
-    }
-  
-    @include desktop {
+
+  @include desktop {
     @include container;
     @include backdrop-card;
-    }
   }
-  
-  //---------------------Card Steps-----------------------------//
-  .card-base {
-    @include card;
-    align-items: center;
-    background-color: map-get($basic-color , lightGray );
-    display: flex;
-    padding: 15px;
-    margin: 15px;
+}
 
-    &-number {
-      background-color: $primary-color;
-      border-radius: 70%;
-      color: map-get($basic-color, white);
-      display: grid;
-      height: $height;
-      place-items: center;
-      position:initial;
-      width: 50%;
-      padding-right: 10px;
-    }
-  
-    &-info {
-      align-items:end;
-      border-radius: map-get($round, round-base);
-      display: grid;
-      gap: map-get($gap, gap-base);
-      overflow: hidden;
-      padding: map-get($padding, medium);
-      padding-right: map-get($gap, gap-base);
-      position:relative;
-      width: 100%;
-      height: 100%;
-    }
-  
-    &-icon {
-      color: gray;
-      font-size: 2.5rem;
-      min-width: 6.35rem;
-      padding-left: calc(map-get($gap, gap-base) + $width / 2);
-      z-index: 10;
-    }
-  
-    &-text {
-      z-index: 10;
-    }
-  
-    &:hover &-background {
-      width: 150%;
-    }
-  
-    &:hover &-icon {
-      color: $primary-color;
-    }
-  }
+.restaurants-section {
+  background-color: $lightGray-color;
+  @include container;
 
-  .card-number {
-    background-color: $primary-color;
-    border-radius: 90%;
-    align-items: flex-start;
-    color: map-get($basic-color, white);
-    display: grid;
-    height: $height;
-    place-items: center;
-    position:inherit;
-    margin-left: -35px;
-    width: 15%;
-  }
-
-  .card-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 2px 0 0 2px;
-  }
-
-  .card-text {
-    padding-left: 9px;
-  }
-
-
-  //-----------------------Restaurants Main - Index---------------------------//
-  .restaurants {
-    background-color: map-get($basic-color, lightGray);
-    @include container;
-  
-    &-title {
-      @include tablet {
-        text-align: center;
-      }
-    }
-  }
-
-  .restaurants-title {
-    padding: 0 600px 15px 0;
-
-  }
-  
-  .restaurant-wrapper {
-    @include container;
-    padding: 0;
-  
+  & > .title {
     @include tablet {
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
     }
-  
-    @include desktop {
-      align-self: center;
-      grid-template-columns: repeat(4, minmax(25rem, 45rem));
-      max-width: 192rem;
-    }
+  }
+}
+
+.restaurants-wrapper {
+  @include container;
+  padding: 0;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 
-  .restaurant-wrapper {
-    display:contents;
-      align-self: center;
-      max-width: 50%;
-      background-color: map-get($basic-color , lightGray);
+  @include desktop {
+    align-self: center;
+    grid-template-columns: repeat(4, minmax(25rem, 45rem));
+    max-width: 192rem;
   }
-  
+}
+

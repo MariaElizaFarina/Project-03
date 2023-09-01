@@ -1,73 +1,47 @@
 @import "../utilities/variables";
-@import "../utilities/heartAnimation";
-
-$heart-size: 1.5em;
 
 .heart {
-  display: grid;
-  position: relative;
-  overflow: hidden;
-  place-items: center;
   clip-path: url(#heart__clip);
   cursor: pointer;
-  height: $heart-size;
-  width: $heart-size;
-  
-    &-svg {
-      position: absolute;
-    }
-  
-    &-main {
-      display: flex;
-      place-items: center;
-      height: $heart-size;
-      width: $heart-size;
-    }
-  
-    &-emp {
-      fill:transparent;
-      height: $heart-size;
-      width: $heart-size;
-      stroke: black;
-      stroke-width: 7px;
-    }
+  display: grid;
+  height: map-get($size , heart-size);
+  overflow: hidden;
+  place-items: center;
+  position: relative;
+  width: map-get($size , heart-size);
 
-    &:hover  {
-      background-image: linear-gradient(
-        $primary-color,
-        $secondary-color,
-       );
-      animation: wave 2s forwards, wave-up 2s forwards;
-      border-radius: 100%;
-    }
-
-    &-fill {
-      background-image: linear-gradient(
-        $primary-color,
-        $secondary-color,
-       );
-      animation: wave 2s forwards, wave-up 2s forwards;
-      border-radius: 100%;
-    }
+  &-img {
+    position: absolute;
   }
 
-  @keyframes wave {
-    0% {
-      transform: rotate(0);
-    }
-    70% {
-      transform: rotate(-360deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
+  &-base {
+    display: grid;
+    height: map-get($size , heart-size);
+    place-items: center;
+    width: map-get($size , heart-size);
   }
-  
-  @keyframes wave-up {
-    0% {
-      bottom: -0%;
-    }
-    100% {
-      bottom: 0;
-    }
+
+  &-empty {
+    fill: transparent;
+    height: map-get($size , heart-size);
+    stroke: $base-black-color;
+    stroke-width: 7px;
+    width: map-get($size , heart-size);
   }
+
+  &-full {
+    background-image: linear-gradient(
+      $primary-color,
+      $secondary-color,
+    );
+    border-radius: 38%;
+    bottom: -100%;
+    height: 110%;
+    position: absolute;
+    width: 110%;
+  }
+
+  &:hover &-full {
+    animation: wave 2s forwards, wave-up 2s forwards;
+  }
+}

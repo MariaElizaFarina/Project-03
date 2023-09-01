@@ -16,36 +16,38 @@
   </head>
 
   <body>
-    <header class="header-menu">
-      <p class="header-menu-link" href="index.html">
-        <i class="fa-solid fa-arrow-left"></i>
-      </p>
-      <h1 class="header-menu-title">
+    <!------- Header ------->
+    <header class="header">
+      <a class="header-link" href="index.html"
+        ><i class="fa-solid fa-arrow-left"></i
+      ></a>
+      <h1 class="header-title">
         <img
-          src="./public/images/logo/ohmyfood@2x.svg"
+          src="public/img/logo/ohmyfood@2x.svg"
           alt="ohmyfood"
           title="Ohmyfood"
         />
       </h1>
-      <!-- <span></span> -->
     </header>
 
     <main>
+      <!------- Top Background image ------->
       <img
-        class="menu-top-image"
-        src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-        alt="The Full Palette"
+        class="top-image"
+        src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="The Full Palette Card Menu"
       />
 
-      <div class="menu-page-ctn">
+      <!------- Menu with gray background ------->
+      <div class="menu-container">
         <div class="menu-title">
-          <h2 class="menu-text">Bastille</h2>
-
+          <h2 class="menu-title">The full Palette</h2>
+          <!------- Heart ------->
           <div class="heart">
-            <svg class="heart-svg" height="0" width="0">
+            <svg class="heart-img" height="0" width="0">
               <defs>
                 <clipPath
-                  id="heart-clip"
+                  id="heart__clip"
                   clipPathUnits="objectBoundingBox"
                   transform="scale(0.01 0.01)"
                 >
@@ -55,152 +57,172 @@
                 </clipPath>
               </defs>
             </svg>
-
-            <div class="heart-main">
-              <svg viewBox="0 0 100 100" class="heart-emp">
+            <div class="heart-base">
+              <svg viewBox="0 0 100 100" class="heart-empty">
                 <path
                   d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z"
                 />
               </svg>
-
-              <div class="heart-fill"></div>
+              <div class="heart-full"></div>
             </div>
           </div>
         </div>
-
-        <section class="menu-section">
-          <h3 class="menu-section-title">Entrees</h3>
-
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Citrus Squid Carpaccio</h4>
-              <p class="menu-description">With orange zest <b>25€</b></p>
-            </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
-            </div>
-          </div>
-
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Grandmother's Vegetable Soup</h4>
-              <p class="menu-description">
-                Carrots, parsnips, Jerusalem artichoke
-                <b>35€</b>
+        <!----- Menu card Entrees ----->
+        <section class="menu-background">
+          <h3 class="menu-background-title">Entrees</h3>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
               </p>
             </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
             </div>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Onion Soup</h4>
-              <p class="menu-description">Revisted <b>20€</b></p>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
+              </p>
             </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
+              </p>
+            </div>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+        <!------ Menu card Main Dish ------>
+        <section class="menu-background">
+          <h3 class="menu-background-title">Main Dish</h3>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
+              </p>
+            </div>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
+              </p>
+            </div>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
+              </p>
+            </div>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
             </div>
           </div>
         </section>
+        <!------ Menu card Desserts ------>
+        <section class="menu-background">
+          <h3 class="menu-background-title">Desserts</h3>
 
-        <section class="menu-section">
-          <h3 class="menu-section-title">Main Dish</h3>
-
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Scallops</h4>
-              <p class="menu-description">With mashed parsnip <b>40€</b></p>
-            </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
-            </div>
-          </div>
-
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Magret de canard</h4>
-              <p class="menu-description">With mashed potatoes <b>25€</b></p>
-            </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
-            </div>
-          </div>
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Game Hen</h4>
-              <p class="menu-description">
-                With vegetables gnocchis <b>44€</b>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
               </p>
             </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
+              </p>
+            </div>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h4 class="menu-item-title">Herb-Encrusted Steak</h4>
+              <p class="menu-item-info">
+                With delicately sliced and seasoned vegetables
+              </p>
+            </div>
+            <div class="menu-item-price">40€</div>
+            <div class="menu-item-button">
+              <i class="menu-item-icon fa-solid fa-circle-check"></i>
             </div>
           </div>
         </section>
-
-        <section class="menu-section">
-          <h3 class="menu-section-title">Desserts</h3>
-
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Floral Ice Cream</h4>
-              <p class="menu-description">With hazelnut butter <b>18€</b></p>
-            </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
-            </div>
-          </div>
-
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Chocolate Lava Cake</h4>
-              <p class="menu-description">Revisited <b>22€</b></p>
-            </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
-            </div>
-          </div>
-
-          <div class="menu-card">
-            <div class="menu-info">
-              <h4 class="menu-title">Napolean</h4>
-              <p class="menu-description">
-                With blueberries and marzipan <b>23€</b>
-              </p>
-            </div>
-            <div class="menu-button">
-              <i class="menu-icon fa-solid fa-circle-check"></i>
-            </div>
-          </div>
-        </section>
-
+        <!------- Order Button ------->
         <button class="btn">Order</button>
       </div>
     </main>
+        <!------- Footer ------->
     <footer class="footer">
-      <h2 class="footer-title">ohmyfood</h2>
+      <h2 class="footer-logo">ohmyfood</h2>
       <ul class="footer-list">
-        <li class="footer-info">
-          <a href="#">
+        <li class="footer-description">
+          <p href="#">
             <i class="footer-icon fa-solid fa-utensils"></i>
             Suggest a restaurant
-          </a>
+          </p>
         </li>
-        <li class="footer-info">
-          <a href="#">
+        <li class="footer-description">
+          <p href="#">
             <i class="footer-icon fa-solid fa-handshake-angle"></i>
             Become a partner
-          </a>
+          </p>
         </li>
-        <li class="footer-info">
-          <a href="#">Legal</a>
+        <li class="footer-description">
+          <p href="#">Legal</p>
         </li>
-        <li class="footer-info">
-          <a href="mailto:#">Contact</a>
+        <li class="footer-description">
+          <p href="mailto:#">Contact</p>
         </li>
       </ul>
     </footer>
+  </body>
+</html>
   </body>
 </html>

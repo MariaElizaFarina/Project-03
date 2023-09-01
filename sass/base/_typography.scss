@@ -1,98 +1,81 @@
-//fonts and sizes
+// Shrikhand
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
+// Roboto
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 @import "../utilities/variables";
 
 body {
-font-family: "Roboto", sans-serif;
-font-size: 1.95rem;
-font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
 }
 
-.h1 .menu-description {
-font-family: "Shrikhand", sans-serif;
-font-style: oblique;
-font-size: 20rem;
-font-weight: 80;
+h1,
+.menu-background-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
-.menu-section .menu-section-title {
-font-size: 24px;
-font-weight: 80;
-text-transform: uppercase;
+.menu-item {
+  &-title {
+    font-size: 22px;
+    line-height: 40px;
+  }
+  &-info {
+    font-size: 18px;
+    font-weight: 100;
+  }
 }
 
-.menu-text {
-    font-family: "Shrikhand", sans-serif;
-    font-size: 46px;
-    font-style: oblique;
-    font-weight: 400;
+h3,
+h4 {
+  font-size: 2.4rem;
 }
 
-.menu-section .h3.h4 {
-font-size: 100rem;
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
-.button {
-font-family:"Roboto", sans-serif;
-font-size: 2rem;
-font-weight: 380;
+.location,
+.navigation-description {
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
-.btn {
-font-size: 20px;
-color: map-get($basic-color , light );
-font-weight: 600;
+.loader-title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 5rem;
+  font-weight: 100;
 }
 
-.btn-bold {
-    font-weight: 300;
-    }
-
-.card-price {
-font-weight: bold;
+.restaurant-card-new {
+  font-weight: 500;
 }
 
-.restaurant-main {
-font-weight: 450;
-}
-
-.restaurant-main-new {
-font-weight: 450;
-color: map-get($basic-color, darkGreen);
-}
-
-.location
-.header-location {
-font-size: 1.8rem;
-font-weight: 200;
-}
-
-.card-text {
-font-size: 2rem;
-font-weight: 400;
-}
-
-.spinning-title {
-font-family: "Shrikhand", sans-serif;
-font-size: 5.2rem;
-font-weight: 100;
+.menu-item-price {
+  font-weight: bold;
 }
 
 .footer {
-&-title {
-font-family: "Shrikhand", sans-serif;
-font-size: 2.4rem;
-font-weight: 100;
-line-height: 50px;
-}
-
-&-info {
-font-size: 2rem;
-line-height: 30px;
-padding-left: 2px;
-font-weight: 380;
-}
+  &-logo {
+    font-family: "Shrikhand", sans-serif;
+    color: $base-white-color;
+    font-weight: 100;
+    font-size: 2.5rem;
+  }
+  &-title {
+    font-family: "Shrikhand", sans-serif;
+    color: $base-white-color;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  &-description {
+    color: $base-white-color;
+    font-size: 1.8rem;
+  }
 }

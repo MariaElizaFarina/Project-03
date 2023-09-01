@@ -1,31 +1,33 @@
 @import "../utilities/variables";
 
 .btn {
-background-image: linear-gradient(
-$secondary-color,
-$primary-color,
-);
-border-radius: map-get($round, round-large);
-box-shadow: map-get($shadow, shadow-base);
-color: map-get($basic-color, white);
-padding: map-get($padding , btn-01 );
-transition: $transition-all-fast;
-width: fit-content;
-
-&-bold {
-font-weight: 300;
-}
-
-&:active {
-box-shadow: map-get($shadow, shadow-active);
-transform: translate(2.8px, 2.8px);
-}
-&:hover {
-background-image: linear-gradient(
-$secondary-color,
-$primary-color,
-);
-box-shadow: map-get($shadow, shadow-down);
-transform: translate(1.9px, 1.9px);
-}
-}
+    background-image: linear-gradient(
+      $secondary-color,
+      $primary-color,
+    );
+    border-radius: map-get($round , round-large);
+    box-shadow: map-get($shadow , shadow-base);
+    color: $base-white-color;
+    padding: map-get($padding , btn-01);
+    transition: $transition-all-fast;
+    width: fit-content;
+  
+    &--bold {
+      font-weight: 400;
+    }
+  
+    &:hover {
+      background-image: linear-gradient(
+        $secondary-color,
+        $primary-color
+      );
+  
+      box-shadow: map-get($shadow , shadow-down);
+      transform: translate(2px, 2px);
+    }
+  
+    &:active {
+      box-shadow: map-get($shadow , shadow-active);
+      transform: translate(3px, 3px);
+    }
+  }

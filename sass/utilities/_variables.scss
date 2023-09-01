@@ -1,54 +1,86 @@
-$view-tablet: 768px;
-$view-desktop-small: 992px;
-$view-desktop: 1400px;
+// Breakpoints
+$size-tablet: 768px;
+$size-small-desktop: 992px;
+$size-desktop: 1400px;
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA ;
-$tertiary-color: #99E2D0;
+  // Colors
 
-$basic-color: (
-"light": white,
-"dark": black,
-"darkGray": gray,
-"lightGray": rgb(180, 180, 180),
-"darkGreen": darkgreen,
-);
+  $primary-color: #9356DC;
+  $secondary-color: #FF79DA;
+  $tertiary-color: #99E2D0;
+  $darkTertiary-color:#0f614c;
+  $lightSecondary-color: #fda6e4;
+  $base-white-color: white;
+  $base-black-color: black;
+  $base-gray-color: rgb(170, 170, 170);
+  $lightGray-color: rgb(223, 223, 223);
+  $darkGray-color: rgb(26, 26, 26);
+  $background-loader-color: #f2f2f2;
+ 
 
-$padding: (
-"btn-01": 2rem 3rem,
-"btn-02": 0.5rem 3rem,
-"base": 2rem 0rem,
-"xsmall": 0.6rem,
-"small": 1.4rem,
-"medium": 2.2rem,
-"large": 3.1rem,
-"xlarge": 4.1rem,
-"padding-menu": 10rem,
-"padding-menu-new": -19rem,
-);
+  $width: (
+    "base-width": 100%,
+    "header-width": 3rem,
+    "index-width": 3rem,
+  );
 
-$gap: (
-"gap-base": 2rem,
-"gap-small": 0.6rem,
-"gap-medium": 2.6rem,
-"gap-large": 3.6rem,
-);
+  $height: (
+    "base-height": 100%,
+    "header-height": 3rem,
+    "index-height": 3rem,
+  );
 
-$round: (
-"round-base": 2rem,
-"round-small": 0.5rem,
-"round-medium": 6rem,
-"round-large": 9rem,
-);
+  // Paddings
+  $padding: (
+    "btn-01": 2rem 3rem,
+    "btn-02": 0.5rem 3rem,
+    "base": 2rem 0rem,
+    "xsmall": 0.6rem,
+    "small": 1.4rem,
+    "medium": 2.2rem,
+    "large": 3.1rem,
+    "xlarge": 4.1rem,
+    "padding-menu": 10rem,
+  );
 
-$shadow: (
-    "shadow-base": 4px 4px 9px #000004,
-    "shadow-down": 4px 4px 5.8px #000006,
-    "shadow-active": 4px 4px 4px #000007,
-);
+  // Margins
+  $margin: (
+    "margin-base": 1rem,
+    // "margin-small": ,
+    // "margin-medium": ,
+    // "margin-large": ,
+    );
 
-$slow: 0.5s;
-$fast: 0.2s;
-$transition-all-fast: all var(--fast) ease-in-out;
-$transition-all-slow: all var(--slow) ease-in-out;
+  // Gaps
+  $gap: (
+    "gap-base": 2rem,
+    "gap-small": 0.6rem,
+    "gap-medium": 2.6rem,
+    "gap-large": 3.6rem,
+    "gap-index": 20rem,
+    );
+  
+  // Border radius
+  $round: (
+    "round-base": 2rem,
+    "round-small": 0.5rem,
+    "round-medium": 6rem,
+    "round-large": 9rem,
+    );
 
+  $size: (
+    "size-loader": 5rem,
+    "heart-size": 3.5rem,
+  );
+
+  $shadow: (
+      "shadow-base": 3.5px 3.5px 9.5px #000004,
+      "shadow-down": 3.5px 3.5px 5.5px #000006,
+      "shadow-active": 3.5px 3.5px 3.5px #000008,
+      "shadow-location": 2px 2px 2px  #c9c9c9,
+  );
+  
+  $slow: 0.5s;
+  $fast: 0.2s;
+  $transition-all-fast: all var(--fast) ease-in-out;
+  $transition-all-slow: all var(--slow) ease-in-out;

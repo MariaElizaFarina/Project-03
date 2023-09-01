@@ -1,41 +1,39 @@
-//pieces of code that we write (Sass)
-@import "../utilities/variables";
 
+// Mixins
 @mixin card {
-    position: relative;
-    border-radius: map-get($round, round-base);
-    box-shadow: map-get($shadow, shadow-base);
-    cursor: pointer;
+  border-radius: map-get($round , round-base);
+  box-shadow: map-get($shadow , shadow-base);
+  cursor: pointer;
+  position: relative;
+}
 
+@mixin backdrop-card {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: map-get($round , round-base);
+}
+
+@mixin container {
+  display: flex;
+  flex-direction: column;
+  gap: map-get($gap , gap-medium);
+  padding: map-get($padding , xlarge) map-get($padding , medium);
+}
+
+@mixin tablet {
+  @media (min-width: $size-tablet) {
+    @content;
   }
-  
-  @mixin backdrop-card {
-    border-radius: map-get($round, round-base);
-    backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.8);
+}
+
+@mixin desktop-small {
+  @media (min-width: $size-small-desktop) {
+    @content;
   }
-  
-  @mixin container {
-    display: flex;
-    flex-direction: column;
-    gap: map-get($gap, medium);
-    padding: map-get($padding, xlarge);
+}
+
+@mixin desktop {
+  @media (min-width: $size-desktop) {
+    @content;
   }
-  
-  @mixin tablet {
-    @media (min-width: $view-tablet) {
-      @content;
-    }
-  }
-  
-  @mixin desktop-small {
-    @media (min-width: $view-desktop-small) {
-      @content;
-    }
-  }
-  
-  @mixin desktop {
-    @media (min-width: $view-desktop) {
-      @content;
-    }
-  }
+}

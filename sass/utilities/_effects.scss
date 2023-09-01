@@ -1,0 +1,136 @@
+//-----------------Heart Effect--------------------//
+
+@keyframes width-hide {
+  0% {
+    width: 100%;
+  }
+  99% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes opacity-hide {
+  0% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes translate-up {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-bounce {
+  0% {
+    opacity: 0%;
+    transform: translateY(-20px);
+  }
+
+  40% {
+    opacity: 50%;
+    transform: translateY(5px);
+  }
+
+  80% {
+    opacity: 100%;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  70% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes wave-up {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+//-----------------Cards Effect-----------------//
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+//------------------Loader----------------------//
+
+@keyframes spinning-loader {
+  0% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//----------------Menu------------------------//
+
+@for $i from 2 through 4 {
+  $duration: 0.3s;
+  $menus: 3;
+  $children: 5;
+  $menu-delay: ($duration * $children) * ($i - 2);
+  .menu-container {
+    & > :nth-child(#{$i}) {
+      animation: fade-in $duration forwards;
+      animation-delay: $menu-delay;
+      opacity: 0%;
+
+      @for $x from 1 through 5 {
+        $children-delay: $menu-delay + $duration * ($x - 1);
+        & > :nth-child(#{$x}) {
+          animation: fade-in $duration forwards,
+            translate-up ($duration * 2) forwards;
+          animation-delay: $children-delay;
+          animation-timing-function: ease-in-out;
+          opacity: 0%;
+        }
+      }
+    }
+  }
+}

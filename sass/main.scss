@@ -1,24 +1,22 @@
+// Utils
 @import "./utilities/variables";
 @import "./utilities/mixin";
-@import "./utilities/heartAnimation";
+@import "./utilities/effects";
 
+// Base
 @import "./base/base";
 @import "./base/typography";
 
-@import "./layout/header";
-
-@import "./layout/loader";
+// Components
 @import "./components/buttons";
-@import "./components/heart";
 @import "./components/cards";
-@import "./layout/footer";
+@import "./components/heart";
 
+// Layout
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/loader";
+
+// Pages
 @import "./pages/index";
 @import "./pages/menu";
-
-
-
-
-
-
- 

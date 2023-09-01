@@ -1,93 +1,120 @@
 @import "../utilities/variables";
-
-
-//------------------Header Restaurant----------------------//
+//-------------Header---------------//
 
 .header {
-  background-color: map-get($basic-color, white);
-  box-shadow: map-get($shadow, shadow-base);
+  background-color: $base-white-color;
+  box-shadow: map-get($shadow , shadow-base);
   display: grid;
-  grid-template-columns: 2fr min-content 1fr;
-  padding-bottom: map-get($padding, small);
-  padding-top: map-get($padding, medium);
+  grid-template-columns: 1fr min-content 1fr;
+  padding-bottom: map-get($padding , small );
+  padding-top: map-get($padding , medium);
   place-items: center;
   position: relative;
   text-align: center;
 
-  &-home {
+  &-index-page {
     @include tablet {
       grid-template-columns: 0 1fr 1fr;
     }
   }
 
   &-title {
-    display: grid;
-    justify-content: start;
-    padding: 9px map-get($padding, medium);
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 map-get($padding , medium);
+    width: map-get($width , base-width);
   }
 
   &-logo {
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    height: map-get($height , base-height);
   }
 
-  &-location {
-    display: none;
-
-    @include tablet {
-      display: flex;
-      gap: map-get($gap, small);
-      justify-self: end;
-      padding: 0 10px 0 10px;
-    }
-  }
-}
-
-i {
-  margin-right: 20px;
-}
-
-//-------------------Header Menu----------------------//
-
-.header-menu {
-  background-color: map-get($basic-color, white);
-  box-shadow: map-get($shadow, shadow-base);
-  display: flex;
-  grid-template-columns: 2fr min-content 1fr;
-  padding-bottom: map-get($padding, small);
-  padding-top: map-get($padding, medium);
-  place-items: center;
-  position: relative;
-  text-align: center;
 
   &-link {
-   display: grid;
-   justify-self: start;
-   font-size: 2.5rem;
-   margin-left: map-get($gap , gap-base);
-   }
+    font-size: 2.5rem;
+    justify-self: start;
+    margin-left: map-get($gap , gap-base);
+  }
+}
 
-  &-title {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 10px 0 10px 0;
-   width: 100%;
-   }
- }
-
-//------------------------Main Location-----------------------------//
+//-------------Location---------------//
 
 .location {
-  background-color: map-get($basic-color, lightGray);
-  display: grid;
-  grid-template-rows: auto;
-  grid-auto-flow: row;
+  background-color: $lightGray-color;
+  display: flex;
+  box-shadow: map-get($shadow , shadow-location );
+  gap: map-get($gap , gap-base);
   justify-content: center;
-  gap: map-get($gap, small);
-  padding: map-get($padding, large);
+  padding: map-get($padding , medium);
+}
 
-  @include tablet {
-    display: none;
+//-------------Steps Card---------------//
+
+.navigation-card {
+  @include card;
+  align-items: center;
+  background-color: $lightGray-color;
+  display: flex;
+  gap: map-get($gap , gap-base);
+  margin-left: calc(map-get($width, header-width) / 2);
+
+  &-number {
+    background-color: $primary-color;
+    border-radius: 50%;
+    color: $base-white-color;
+    display: grid;
+    height: map-get($height , header-height);
+    left: calc(map-get($width, header-width) / 2 * -1);
+    place-items: center;
+    position: absolute;
+    width: map-get($width, header-width);
+    z-index: 10;
+  }
+
+  &-description {
+    align-items: center;
+    border-radius: map-get($round, round-base);
+    display: flex;
+    gap: map-get($gap, gap-base);
+    height: 100%;
+    overflow: hidden;
+    padding: var(--padding-card);
+    padding-right: map-get($gap, gap-base);
+    position: relative;
+    width: 100%;
+  }
+
+  &-icon {
+    color: gray;
+    font-size: 2.5rem;
+    min-width: 6.35rem;
+    padding-left: calc(map-get($gap, gap-base) + map-get($width, header-width) / 2);
+    z-index: 10;
+  }
+
+  &-text {
+    z-index: 10;
+  }
+
+  &-background {
+    background-color: $primary-color;
+    height: map-get($height , base-height );
+    left: -3rem;
+    position: absolute;
+    top: 0;
+    transform: skewX(-45deg);
+    transition: all 0.5s ease-in-out;
+    width: 0;
+    z-index: 9;
+  }
+
+  &:hover &-background {
+    width: 150%;
+  }
+
+  &:hover &-icon {
+    color: $primary-color;
   }
 }
