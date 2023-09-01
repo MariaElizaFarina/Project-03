@@ -1,41 +1,47 @@
 @import "../utilities/variables";
 //-------------Header---------------//
 
-.header {
-  background-color: $base-white-color;
-  box-shadow: map-get($shadow , shadow-base);
+.page-header {
   display: grid;
-  grid-template-columns: 1fr min-content 1fr;
-  padding-bottom: map-get($padding , small );
-  padding-top: map-get($padding , medium);
   place-items: center;
   position: relative;
   text-align: center;
-
-  &-index-page {
-    @include tablet {
-      grid-template-columns: 0 1fr 1fr;
-    }
-  }
+  background-color: $base-white-color;
+  box-shadow: map-get($shadow , shadow-base);
+  grid-template-columns: 1fr min-content 1fr;
+  padding-bottom: map-get($padding , small );
+  padding-top: map-get($padding , medium);
 
   &-title {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-content: start;
     padding: 0 map-get($padding , medium);
     width: map-get($width , base-width);
   }
 
   &-logo {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    align-items: start;
+    justify-content: start;
     height: map-get($height , base-height);
   }
 
-
   &-link {
+    display: flex;
+    justify-self: center;
     font-size: 2.5rem;
-    justify-self: start;
-    margin-left: map-get($gap , gap-base);
+  }
+}
+
+.arrow {
+  display: flex;
+  align-items: start;
+  padding-right: 600px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition-delay: 0.5s;
+    cursor: pointer;
   }
 }
 
@@ -48,9 +54,15 @@
   gap: map-get($gap , gap-base);
   justify-content: center;
   padding: map-get($padding , medium);
+
+  &:hover {
+    transform: scale(1.0);
+    transition-delay: 0.5s;
+    cursor: pointer;
+  }
 }
 
-//-------------Steps Card---------------//
+//-------------Navigation Card---------------//
 
 .navigation-card {
   @include card;
@@ -58,9 +70,10 @@
   background-color: $lightGray-color;
   display: flex;
   gap: map-get($gap , gap-base);
-  margin-left: calc(map-get($width, header-width) / 2);
+  margin-left: calc(map-get($width, header-width) / 10);
+}
 
-  &-number {
+  .navigation-number {
     background-color: $primary-color;
     border-radius: 50%;
     color: $base-white-color;
@@ -71,19 +84,18 @@
     position: absolute;
     width: map-get($width, header-width);
     z-index: 10;
-  }
 
   &-description {
     align-items: center;
     border-radius: map-get($round, round-base);
     display: flex;
     gap: map-get($gap, gap-base);
-    height: 100%;
+    height: map-get($height , base-height);
     overflow: hidden;
-    padding: var(--padding-card);
+    padding: map-get($padding , base);
     padding-right: map-get($gap, gap-base);
     position: relative;
-    width: 100%;
+    width: map-get($width , base-width);
   }
 
   &-icon {
@@ -97,9 +109,10 @@
   &-text {
     z-index: 10;
   }
+  }
 
-  &-background {
-    background-color: $primary-color;
+  .navigation-background {
+    background-color: $lightSecondary-color;
     height: map-get($height , base-height );
     left: -3rem;
     position: absolute;
@@ -108,7 +121,6 @@
     transition: all 0.5s ease-in-out;
     width: 0;
     z-index: 9;
-  }
 
   &:hover &-background {
     width: 150%;
