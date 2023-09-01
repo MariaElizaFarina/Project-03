@@ -4,21 +4,25 @@
 //-------------Menu Container---------------//
 
 .menu-container {
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  justify-content: center;
+  align-items: center;
   background-color: $lightGray-color;
   border-radius: 6rem 6rem 0 0;
   margin-top: calc(map-get($round, round-medium) * -1);
   min-height: 50rem;
-  position: relative;
   @include container;
   @include tablet {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 90rem;
+    // margin-left: auto;
+    // margin-right: auto;
+    max-width: 80rem;
   }
   @include desktop {
     display: grid;
     grid-template-columns: repeat(3, minmax(35rem, 33%));
-    max-width: 192rem;
+    max-width: 200rem;
   }
 }
 
@@ -59,14 +63,17 @@
   }
 }
 
-.menu-container .btn {
-  margin: 0 auto;
-  margin-bottom: map-get($padding , xlarge);
-  margin-top: map-get($padding , medium);
-  padding-left: map-get($padding , padding-menu);
-  padding-right: map-get($padding , padding-menu);
-  @include desktop {
-    grid-column-end: 4;
-    grid-column-start: 1;
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    margin-bottom: map-get($padding , xlarge);
+    margin-top: map-get($padding , medium);
+    padding-left: map-get($padding , padding-menu);
+    padding-right: map-get($padding , padding-menu);
+    // @include desktop {
+    //   grid-column-end: 4;
+    //   grid-column-start: 1;
+    // }
+  
   }
-}
