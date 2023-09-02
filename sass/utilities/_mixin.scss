@@ -8,15 +8,15 @@
 }
 
 @mixin backdrop-card {
-  backdrop-filter: blur(3px);
-  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.808);
   border-radius: map-get($round , round-base);
 }
 
 @mixin container {
   display: flex;
   flex-direction: column;
-  gap: map-get($gap , gap-medium);
+  gap: map-get($gap , gap-large);
   padding: map-get($padding , xlarge) map-get($padding , medium);
 }
 

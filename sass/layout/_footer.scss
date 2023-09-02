@@ -3,44 +3,25 @@
 .footer {
   background-color: $darkGray-color;
   color: $base-white-color;
-  display: flex;
-  flex-direction: row;
+
   @include container;
   @include tablet {
     align-items: center;
   }
+
   &-list {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: map-get($gap , gap-small);
-    @include tablet {
-      flex-direction: row;
-      gap: calc(map-get($gap , gap-large) * 2);
-    }
-  }
-  &-icon {
-    min-width: 2.5rem;
+   display: flex;
+   flex-direction: column;
+   list-style: none;
+   gap: map-get($gap , gap-small);
+   @include tablet {
+   gap: 1px;
+   }
   }
 
   &-description {
-    display: flex;
-    flex-direction: column;
     position: relative;
     width: fit-content;
-    gap: calc(map-get($gap , gap-small) / 2);
-
-    &::after {
-      background-image: linear-gradient(
-       $primary-color,
-       $secondary-color,
-      );
-      content: "";
-      height: 3px;
-      margin-left: calc(map-get($margin , margin-base) * -1);
-      transition: $transition-all-fast;
-      width: 0%;
-    }
 
     &:hover {
       transform: scale(0.9);
@@ -50,5 +31,18 @@
         width: calc(100% + map-get($margin , margin-base) * 2);
       }
     }
+    &::after {
+      background-image: linear-gradient(
+       $primary-color,
+       $secondary-color,
+      );
+      content: "";
+      margin-left: calc(map-get($margin , margin-base) * -1);
+      transition: $transition-all-fast;
+      width: 0%;
+    }
+  }
+  &-icon {
+    min-width: 2.2rem;
   }
 }
