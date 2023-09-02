@@ -18,36 +18,7 @@ button {
   font-weight: 400;
 }
 
-h1,
-.menu-background-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-.restaurant-name {
-  font-size: 25px;
-  color: $base-black-color;
-  text-decoration: transparent;
-  line-height: 45px;
-}
-
-.restaurant-location {
-  font-size: 20px;
-  color: $base-black-color;
-  text-decoration:transparent;
-}
-
-.menu-item {
-  &-title {
-    font-size: 22px;
-    line-height: 40px;
-  }
-  &-info {
-    font-size: 18px;
-    font-weight: 100;
-  }
-}
+//------------Header - Index & Menu-------------//
 
 .location {
   font-size: 1.7rem;
@@ -70,13 +41,54 @@ h1,
   font-weight: 100;
 }
 
+//------------Index - Main Page-------------//
+
+.restaurant-name {
+  font-size: 25px;
+  color: $base-black-color;
+  text-decoration: transparent;
+  line-height: 45px;
+}
+
+.restaurant-location {
+  font-size: 20px;
+  color: $base-black-color;
+  text-decoration:transparent;
+}
+
 .restaurant-card-new {
   font-weight: 500;
+}
+
+//------------Menu Page-------------//
+
+.menu-title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 35px;
+  font-weight: lighter ;
+}
+
+.menu-background-title {
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .menu-item-price {
   font-weight: bold;
 }
+
+.menu-item {
+  &-title {
+    font-size: 22px;
+    line-height: 40px;
+  }
+  &-info {
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+//------------Footer-------------//
 
 .footer {
   &-logo {

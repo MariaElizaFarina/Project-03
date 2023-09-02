@@ -249,35 +249,6 @@ button {
   font-weight: 400;
 }
 
-h1,
-.menu-background-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-.restaurant-name {
-  font-size: 25px;
-  color: black;
-  text-decoration: transparent;
-  line-height: 45px;
-}
-
-.restaurant-location {
-  font-size: 20px;
-  color: black;
-  text-decoration: transparent;
-}
-
-.menu-item-title {
-  font-size: 22px;
-  line-height: 40px;
-}
-.menu-item-info {
-  font-size: 18px;
-  font-weight: 100;
-}
-
 .location {
   font-size: 1.7rem;
   font-weight: 500;
@@ -298,12 +269,45 @@ h1,
   font-weight: 100;
 }
 
+.restaurant-name {
+  font-size: 25px;
+  color: black;
+  text-decoration: transparent;
+  line-height: 45px;
+}
+
+.restaurant-location {
+  font-size: 20px;
+  color: black;
+  text-decoration: transparent;
+}
+
 .restaurant-card-new {
   font-weight: 500;
 }
 
+.menu-title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 35px;
+  font-weight: lighter;
+}
+
+.menu-background-title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 .menu-item-price {
   font-weight: bold;
+}
+
+.menu-item-title {
+  font-size: 22px;
+  line-height: 40px;
+}
+.menu-item-info {
+  font-size: 18px;
+  font-weight: 100;
 }
 
 .footer-logo {
@@ -830,12 +834,14 @@ h1,
 
 .menu-title {
   display: flex;
-  align-items: center;
+  justify-content: start;
+  justify-content: space-around;
   grid-template-columns: 2fr min-content;
-  justify-content: space-between;
+  margin-right: 1px;
+  font-style: oblique;
 }
 .menu-title .heart {
-  margin-right: 2rem;
+  margin-left: 15rem;
 }
 @media (min-width: 1400px) {
   .menu-title {

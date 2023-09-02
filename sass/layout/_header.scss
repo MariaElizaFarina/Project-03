@@ -61,7 +61,7 @@
 .location {
   background-color: $lightGray-color;
   display: flex;
-  box-shadow: map-get($shadow , shadow-location );
+  box-shadow: map-get($shadow , shadow-location);
   gap: map-get($gap , gap-base);
   justify-content: center;
   padding: map-get($padding , medium);

@@ -34,12 +34,14 @@
 
 .menu-title {
   display: flex;
-  align-items: center;
+  justify-content: start;
+  justify-content: space-around;
   grid-template-columns: 2fr min-content;
-  justify-content: space-between;
+  margin-right: 1px;
+  font-style: oblique;
 
   & .heart {
-    margin-right: 2rem;
+    margin-left: 15rem;
   }
   @include desktop {
     grid-column-end: 4;
