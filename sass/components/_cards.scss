@@ -20,7 +20,7 @@
   &-new {
     background-color: $tertiary-color;
     border-radius: map-get($round , round-small);
-    color: $tertiary-color;
+    color: $darkTertiary-color;
     padding: map-get($padding , btn-02);
     position: absolute;
     right: map-get($padding , small);

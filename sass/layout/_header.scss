@@ -78,11 +78,11 @@
 .navigation-card {
   @include card;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  // align-items: start;
+  // justify-content: start;
   background-color: $lightGray-color;
   line-height: 20px;
-  gap: map-get($gap , gap-large);
+  gap: map-get($gap , gap-medium);
   margin: 20px;
   padding: 5px;
   width: 500px;
@@ -90,16 +90,17 @@
 }
 
   .navigation-number {
+    display: grid;
+    flex-direction: column;
+    place-items: center;
+    position: relative;
     background-color: $primary-color;
     border-radius: 100%;
     color: $base-white-color;
-    display: grid;
     height: map-get($height , header-height);
     left: calc(map-get($width, header-width) / 2 * -1);
-    place-items: center;
-    position: absolute;
     width: map-get($width, header-width);
-    z-index: 10;
+    z-index: 5;
   }
 
   .navigation-description {

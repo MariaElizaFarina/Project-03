@@ -1,6 +1,9 @@
 @import "../utilities/variables";
 
 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: linear-gradient(
       $secondary-color,
       $primary-color,
