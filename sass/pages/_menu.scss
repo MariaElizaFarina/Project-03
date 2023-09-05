@@ -27,20 +27,20 @@
 
 .top-image {
   height: 40rem;
-  object-fit: cover;
+  object-fit:cover;
+  object-position: right 66%;
   width: map-get($width , base-width );
 }
 
 .menu-title {
-  display: flex;
-  justify-content: start;
+  display:inline-flex;
   justify-content: space-around;
-  grid-template-columns: 2fr min-content;
-  margin-right: 1px;
-  font-style: oblique;
 
   & .heart {
-    margin-left: 15rem;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5rem;
+
   }
   @include desktop {
     grid-column-end: 4;

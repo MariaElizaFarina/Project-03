@@ -310,6 +310,7 @@ button {
   font-family: "Shrikhand", sans-serif;
   font-size: 35px;
   font-weight: lighter;
+  font-style: oblique;
 }
 
 .menu-background-title {
@@ -876,19 +877,18 @@ button {
 .top-image {
   height: 40rem;
   object-fit: cover;
+  object-position: right 66%;
   width: 100%;
 }
 
 .menu-title {
-  display: flex;
-  justify-content: start;
+  display: inline-flex;
   justify-content: space-around;
-  grid-template-columns: 2fr min-content;
-  margin-right: 1px;
-  font-style: oblique;
 }
 .menu-title .heart {
-  margin-left: 15rem;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 5rem;
 }
 @media (min-width: 1400px) {
   .menu-title {
