@@ -34,9 +34,6 @@
       transform: scale(0.9);
       transition-delay: 0.5s;
       cursor: pointer;
-      &::after {
-        width: calc(100% + map-get($margin , margin-base) * 2);
-      }
     }
     &::after {
       background-image: linear-gradient(
@@ -47,6 +44,7 @@
       margin-left: calc(map-get($margin , margin-base) * -1);
       transition: $transition-all-fast;
       width: 0%;
+      height: 4px;
     }
   }
   &-icon {

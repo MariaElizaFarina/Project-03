@@ -121,7 +121,7 @@
       animation-delay: $menu-delay;
       opacity: 0%;
 
-      @for $x from 1 through 5 {
+      @for $x from 1 through 6 {
         $children-delay: $menu-delay + $duration * ($x - 1);
         & > :nth-child(#{$x}) {
           animation: fade-in $duration forwards,

@@ -3,7 +3,7 @@
 //-------------Main - Restaurants Cards---------------//
 
 .restaurant-card {
-  @include card;
+  @include navigation;
   background-color: $base-white-color;
   display: flex;
   flex-direction: column;
@@ -78,6 +78,7 @@
   // overflow: hidden;
   border-radius: map-get($round , round-base);
   background-color: $base-white-color;
+
   &-text {
     flex: 1 1 0;
     min-width: 0;

@@ -34,7 +34,7 @@
 .arrow {
   display: flex;
   align-items: start;
-  padding-right: 600px;
+  padding-right: 100px;
   margin-top: 18px;
 
   &:hover {
@@ -49,11 +49,15 @@
 .page-header-menu {
   @include desktop;
   @include tablet;
-  display: grid;
+  // display: grid;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  justify-content: center;
   background-color: $base-white-color;
   box-shadow: map-get($shadow , shadow-base);
-  grid-template-columns: 1fr min-content 1fr;
-  padding: 20px;
+  // grid-template-columns: 2fr min-content 2fr;
+  padding: 20px 60px 20px 0;
 }
 
 //-------------Location---------------//
@@ -76,68 +80,62 @@
 //-------------Navigation Card---------------//
 
 .navigation-card {
-  @include card;
-  display: flex;
-  // align-items: start;
-  // justify-content: start;
-  background-color: $lightGray-color;
-  line-height: 20px;
-  gap: map-get($gap , gap-medium);
-  margin: 20px;
-  padding: 5px;
-  width: 500px;
-
+@include navigation;
+display: grid;
+align-items: center;
+background-color: $lightGray-color;
+gap: map-get($gap, gap-base);
+margin: 20px;
 }
 
-  .navigation-number {
-    display: grid;
-    flex-direction: column;
-    place-items: center;
-    position: relative;
-    background-color: $primary-color;
-    border-radius: 100%;
-    color: $base-white-color;
-    height: map-get($height , header-height);
-    left: calc(map-get($width, header-width) / 2 * -1);
-    width: map-get($width, header-width);
-    z-index: 5;
-  }
+.navigation-number {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  background-color: $primary-color;
+  border-radius: 50%;
+  color: $base-white-color;
+  height: map-get($height , index-height);
+  left: calc(map-get($width, index-width) / 2 * -1);
+  width: map-get($width, index-width);
+  z-index: 10;
+}
 
-  .navigation-description {
-    align-items: center;
-    border-radius: map-get($round, round-base);
-    display: flex;
-    gap: map-get($gap, gap-base);
-    height: map-get($height , base-height);
-    overflow: hidden;
-    padding: map-get($padding , base);
-    padding-right: map-get($gap, gap-base);
-    position: relative;
-    width: map-get($width , base-width);
-  }
+.navigation-description {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: map-get($round, round-base);
+  gap: map-get($gap, gap-base);
+  height: map-get($height, base-height);
+  padding: 20px;
+  width: map-get($width, base-width);
 
-  .navigation-icon {
-    display: flex;
-    min-width: 6rem;
-  }
-
-  // .navigation-text {
-  //   z-index: 10;
-  // }
-
-  .navigation-background {
-    background-color: $lightSecondary-color;
-    height: map-get($height , base-height );
-    left: -3rem;
-    position: absolute;
+  &:hover  {
+    background-color: $lightPrimary-color;
+    height: map-get($height, base-height);
     top: 0;
-    transform: skewX(-45deg);
+    transform: skewX(1deg);
     transition: all 0.5s ease-in-out;
-    width: 0;
-    z-index: 9;
-
-    &:hover {
-      width: 150%;
-    }
+    z-index: 1;
+    transform: scale(1.0);
+    transition-delay: 0.5s;
+    cursor: pointer;
   }
+}
+.navigation-icon {
+  color: gray;
+  font-size: 2.5rem;
+  min-width: 4rem;
+  padding: map-get($padding , xsmall);
+  z-index: 10;
 
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.navigation-text {
+  z-index: 10;
+}

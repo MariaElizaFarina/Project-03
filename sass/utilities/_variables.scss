@@ -2,25 +2,27 @@
 $size-tablet: 768px;
 $size-small-desktop: 992px;
 $size-desktop: 1400px;
+$size-mobile: 667px;
 
   // Colors
 
   $primary-color: #9356DC;
   $secondary-color: #FF79DA;
   $tertiary-color: #99E2D0;
+  $lightPrimary-color: #e9d8ff;
+  $lightSecondary-color: #ffcdf1;
   $darkTertiary-color:#0f614c;
-  $lightSecondary-color: #fda6e4;
   $base-white-color: white;
   $base-black-color: black;
   $base-gray-color: rgb(170, 170, 170);
-  $lightGray-color: rgb(223, 223, 223);
+  $lightGray-color:rgb(211, 211, 211);
   $darkGray-color: rgb(26, 26, 26);
   $background-loader-color: #f2f2f2;
  
 
   $width: (
     "base-width": 100%,
-    "header-width": 3rem,
+    "header-width": 3.5rem,
     "index-width": 3rem,
   );
 
@@ -77,7 +79,7 @@ $size-desktop: 1400px;
       "shadow-base": 3.5px 3.5px 9.5px #000004,
       "shadow-down": 3.5px 3.5px 5.5px #000006,
       "shadow-active": 3.5px 3.5px 3.5px #000008,
-      "shadow-location": 2px 2px 2px  #afadad,
+      "shadow-location": 2px 2px 2px 2px #afadad,
   );
   
   $slow: 0.5s;

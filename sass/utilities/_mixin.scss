@@ -1,6 +1,6 @@
 
 // Mixins
-@mixin card {
+@mixin navigation {
   border-radius: map-get($round , round-base);
   box-shadow: map-get($shadow , shadow-base);
   cursor: pointer;
@@ -18,6 +18,12 @@
   flex-direction: column;
   gap: map-get($gap , gap-large);
   padding: map-get($padding , xlarge) map-get($padding , medium);
+}
+
+@mixin mobile{
+  @media (min-width: $size-mobile) {
+    @content;
+  }
 }
 
 @mixin tablet {
