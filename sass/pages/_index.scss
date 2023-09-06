@@ -4,6 +4,7 @@
 
 .top {
   @include desktop {
+    background-color: $lightSecondGray-color;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -35,23 +36,25 @@
 }
 
 .navigation {
-  @include container;
-
-  @include tablet {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-
-    &-title {
-      grid-column-end: 4;
-      grid-column-start: 1;
-      text-align: center;
-    }
-  }
-
-  @include desktop {
+  .navigation {
     @include container;
-    @include backdrop-card;
+  
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+  
+      .title {
+        grid-column-end: 4;
+        grid-column-start: 1;
+        text-align: center;
+      }
+    }
+  
+    @include desktop {
+      @include container;
+      @include backdrop-card;
+    }
   }
 }
 

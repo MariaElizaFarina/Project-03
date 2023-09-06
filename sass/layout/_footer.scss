@@ -27,27 +27,34 @@
   }
 
   &-description {
+    display: flex;
+    flex-direction: column;
     position: relative;
+    gap: calc(map-get($gap , gap-small) / 2);
     width: fit-content;
+    line-height: 30px;
 
-    &:hover {
-      transform: scale(0.9);
-      transition-delay: 0.5s;
-      cursor: pointer;
-    }
     &::after {
       background-image: linear-gradient(
-       $primary-color,
-       $secondary-color,
+        $primary-color,
+        $secondary-color,
       );
       content: "";
-      margin-left: calc(map-get($margin , margin-base) * -1);
-      transition: $transition-all-fast;
+      height: 3px;
       width: 0%;
-      height: 4px;
+      margin-left: calc(map-get($margin, margin-base) * -1);
+      transition: $transition-all-fast;
+    }
+
+    &:hover {
+      cursor: pointer;
+      &::after {
+        width: calc(100% + map-get($margin, margin-base) * -1);
+      }
     }
   }
-  &-icon {
+
+  .footer-icon {
     min-width: 2.2rem;
   }
 }
