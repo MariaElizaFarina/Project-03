@@ -44,6 +44,10 @@
   }
 }
 
+.restaurants-section {
+  box-shadow: map-get($shadow , shadow-base);
+}
+
 .main-title-restaurants {
   display: flex;
   align-items: center;
@@ -120,7 +124,11 @@ margin: 20px;
 
 
   &:hover  {
-    background-color: $lightSecondary-color;
+    background-image: linear-gradient(
+      to right,
+      $lightPrimary-color,
+      $lightSecondary-color,
+    );
     height: map-get($height, base-height);
     top: 0;
     transform: skewX(1deg);

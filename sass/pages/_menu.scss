@@ -13,6 +13,7 @@
   border-radius: 6rem 6rem 0 0;
   margin-top: calc(map-get($round, round-medium) * -1);
   min-height: 50rem;
+  box-shadow: map-get($shadow , shadow-base);
   @include container;
   @include tablet {
   max-width: 800rem;
@@ -30,6 +31,7 @@
   object-fit:cover;
   object-position: right 66%;
   width: map-get($width , base-width );
+  box-shadow: map-get($shadow , shadow-base);
 }
 
 .menu-title {
@@ -67,7 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0 40px 90px;
+  margin: 40px 0 40px 30px;
   padding-left: map-get($padding , padding-menu);
   padding-right: map-get($padding , padding-menu);
   }
