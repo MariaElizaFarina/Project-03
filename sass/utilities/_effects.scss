@@ -50,12 +50,12 @@
     transform: translateY(-20px);
   }
 
-  25% {
+  40% {
     opacity: 50%;
     transform: translateY(5px);
   }
 
-  50% {
+  80% {
     opacity: 100%;
     transform: translateY(-2px);
   }
@@ -111,7 +111,7 @@
 //----------------Menu------------------------//
 
 @for $i from 2 through 4 {
-  $duration: 0.5s;
+  $duration: 0.3s;
   $menus: 3;
   $children: 5;
   $menu-delay: ($duration * $children) * ($i - 2);
@@ -121,11 +121,11 @@
       animation-delay: $menu-delay;
       opacity: 0%;
 
-      @for $x from 1 through 6 {
+      @for $x from 1 through 5 {
         $children-delay: $menu-delay + $duration * ($x - 1);
         & > :nth-child(#{$x}) {
           animation: fade-in $duration forwards,
-          translate-up ($duration * 2) forwards;
+            translate-up ($duration * 2) forwards;
           animation-delay: $children-delay;
           animation-timing-function: ease-in-out;
           opacity: 0%;

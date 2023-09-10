@@ -1,8 +1,11 @@
 @import "../utilities/variables";
 
-.footer {
+footer {
   background-color: $darkGray-color;
   color: $base-white-color;
+}
+
+.footer {
   display: flex;
   flex-direction: column;
   line-height: 20px;
@@ -57,4 +60,8 @@
   .footer-icon {
     min-width: 2.2rem;
   }
+}
+
+.footer-malito {
+  color: $base-white-color;
 }

@@ -43,11 +43,11 @@
     opacity: 0%;
     transform: translateY(-20px);
   }
-  25% {
+  40% {
     opacity: 50%;
     transform: translateY(5px);
   }
-  50% {
+  80% {
     opacity: 100%;
     transform: translateY(-2px);
   }
@@ -92,127 +92,109 @@
   }
 }
 .menu-container > :nth-child(2) {
-  animation: fade-in 0.5s forwards;
+  animation: fade-in 0.3s forwards;
   animation-delay: 0s;
   opacity: 0%;
 }
 .menu-container > :nth-child(2) > :nth-child(1) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
   animation-delay: 0s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(2) > :nth-child(2) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 0.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 0.3s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(2) > :nth-child(3) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 1s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 0.6s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(2) > :nth-child(4) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 1.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 0.9s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(2) > :nth-child(5) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 2s;
-  animation-timing-function: ease-in-out;
-  opacity: 0%;
-}
-.menu-container > :nth-child(2) > :nth-child(6) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 2.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 1.2s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 
 .menu-container > :nth-child(3) {
-  animation: fade-in 0.5s forwards;
-  animation-delay: 2.5s;
+  animation: fade-in 0.3s forwards;
+  animation-delay: 1.5s;
   opacity: 0%;
 }
 .menu-container > :nth-child(3) > :nth-child(1) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 2.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 1.5s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(3) > :nth-child(2) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 3s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 1.8s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(3) > :nth-child(3) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 3.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 2.1s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(3) > :nth-child(4) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 4s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 2.4s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(3) > :nth-child(5) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 4.5s;
-  animation-timing-function: ease-in-out;
-  opacity: 0%;
-}
-.menu-container > :nth-child(3) > :nth-child(6) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 2.7s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 
 .menu-container > :nth-child(4) {
-  animation: fade-in 0.5s forwards;
-  animation-delay: 5s;
+  animation: fade-in 0.3s forwards;
+  animation-delay: 3s;
   opacity: 0%;
 }
 .menu-container > :nth-child(4) > :nth-child(1) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 3s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(4) > :nth-child(2) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 5.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 3.3s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(4) > :nth-child(3) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 6s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 3.6s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(4) > :nth-child(4) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 6.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 3.9s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
 .menu-container > :nth-child(4) > :nth-child(5) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 7s;
-  animation-timing-function: ease-in-out;
-  opacity: 0%;
-}
-.menu-container > :nth-child(4) > :nth-child(6) {
-  animation: fade-in 0.5s forwards, translate-up 1s forwards;
-  animation-delay: 7.5s;
+  animation: fade-in 0.3s forwards, translate-up 0.6s forwards;
+  animation-delay: 4.2s;
   animation-timing-function: ease-in-out;
   opacity: 0%;
 }
@@ -547,9 +529,12 @@ button {
   animation: wave 0.1s forwards, wave-up 0.1s forwards;
 }
 
-.footer {
+footer {
   background-color: rgb(66, 66, 66);
   color: white;
+}
+
+.footer {
   display: flex;
   flex-direction: column;
   line-height: 20px;
@@ -600,6 +585,10 @@ button {
 }
 .footer .footer-icon {
   min-width: 2.2rem;
+}
+
+.footer-malito {
+  color: white;
 }
 
 .page-header-main {
