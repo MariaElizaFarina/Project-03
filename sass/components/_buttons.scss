@@ -1,39 +1,40 @@
 @import "../utilities/variables";
 
+//--------------------Btn Menu Page-----------------//
+
 .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(
-      $secondary-color,
-      $primary-color,
-    );
-    border-radius: map-get($round , round-large);
-    box-shadow: map-get($shadow , shadow-base);
-    color: $base-white-color;
-    padding: map-get($padding , btn-01);
-    transition: $transition-all-fast;
-    width: fit-content;
-  
-    &--bold {
-      font-weight: 400;
-    }
-  
-    &:hover {
-      background-image: linear-gradient(
-        $secondary-color,
-        $primary-color
-      );
-  
-      box-shadow: map-get($shadow , shadow-down);
-      transform: translate(2px, 2px);
-    }
-  
-    &:active {
-      box-shadow: map-get($shadow , shadow-active);
-      transform: translate(3px, 3px);
-    }
+  background-image: linear-gradient(
+    $secondary-color,
+    $primary-color,
+  );
+  border-radius: map-get($round , round-large);
+  box-shadow: map-get($shadow , shadow-base);
+  color: $base-white-color;
+  padding: map-get($padding , btn-01);
+  transition: $transition-all-fast;
+  margin: 0 auto;
+  margin-bottom: map-get($padding , xlarge);
+  margin-top: map-get($padding , medium);
+  padding-left: map-get($padding , padding-menu);
+  padding-right: map-get($padding , padding-menu);
+  @include desktop;
+  @include tablet {
+    grid-column-end: 4;
+    grid-column-start: 1;
   }
+
+  &:hover {
+    box-shadow: map-get($shadow , shadow-down);
+    transform: translate(2px, 2px);
+  }
+
+  &:active {
+    box-shadow: map-get($shadow , shadow-active);
+    transform: translate(3px, 3px);
+  }
+}
+
+//--------------------Btn Main Page-----------------//
 
   .btn-index {
     display: flex;
@@ -50,16 +51,11 @@
     transition: $transition-all-fast;
     width: fit-content;
   
-    &--bold {
+    &-bold {
       font-weight: 400;
     }
   
     &:hover {
-      background-image: linear-gradient(
-        $secondary-color,
-        $primary-color
-      );
-  
       box-shadow: map-get($shadow , shadow-down);
       transform: translate(2px, 2px);
     }

@@ -20,12 +20,6 @@
   padding: map-get($padding , xlarge) map-get($padding , medium);
 }
 
-@mixin mobile{
-  @media (min-width: $size-mobile) {
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (min-width: $size-tablet) {
     @content;

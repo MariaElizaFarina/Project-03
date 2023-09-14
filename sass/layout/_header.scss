@@ -98,6 +98,10 @@ gap: map-get($gap, gap-base);
 margin: 20px;
 }
 
+.navigation-title {
+  padding-left: 30px;
+}
+
 .navigation-number {
   display: grid;
   place-items: center;
