@@ -89,6 +89,10 @@
 
 //-------------Navigation Card---------------//
 
+.navigation {
+  padding-bottom: 20px;
+}
+
 .navigation-card {
 @include navigation;
 display: grid;
@@ -96,6 +100,7 @@ align-items: center;
 background-color: $lightGray-color;
 gap: map-get($gap, gap-base);
 margin: 20px;
+padding-bottom: 10px;
 }
 
 .navigation-title {
