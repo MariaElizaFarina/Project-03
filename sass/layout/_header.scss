@@ -134,14 +134,15 @@ padding-bottom: 10px;
 
   &:hover  {
     background-image: linear-gradient(
-      to right,
       $lightPrimary-color,
       $lightSecondary-color,
     );
     height: map-get($height, base-height);
     top: 0;
-    transform: skewX(1deg);
-    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 120%;
+    transform: skewX(10deg);
+    transition: all 0.3s ease-in-out;
     z-index: 9;
     transform: scale(1.02);
     transition-delay: 0.5s;
